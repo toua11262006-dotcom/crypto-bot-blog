@@ -75,10 +75,22 @@ sudo systemctl enable --now trading-bot
 - **systemdの自動再起動**: プロセスが落ちたら即復帰
 - **定期ヘルスチェック**: ログの更新が止まっていないか、残高が異常に減っていないかを定期的に確認し、異常があれば通知する
 
+## 補足: FX(MT4/EA)の自動売買ならFX特化VPSという選択肢も
+
+この記事で紹介したのはLinux VPS(Pythonの自作ボット向け)ですが、**MT4/MT5のEAでFXの自動売買**をしたい場合は事情が変わります。MT4はWindowsアプリなので、Windows Serverが最初から入っているFX特化型のVPSを選んだほうがセットアップが圧倒的に楽です。
+
+<div class="affiliate-box">
+<span class="label">PR</span>
+<p>FX自動売買(MT4/EA)向けにチューニングされたWindows VPS。MT4を動かす前提なら、汎用VPSにWindowsを載せるよりこちらのほうが手間もコストも抑えられます。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4B7U10+4Q9ZSI+CO4+44UKYA" rel="nofollow">XServer VPS for FX プレミアム</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B7U10+4Q9ZSI+CO4+44UKYA" alt=""></p>
+</div>
+
 ## まとめ
 
 - ボットの24時間運用にはVPSがほぼ必須
-- スペックは最安プランで十分。月500円台から始められる
+- 自作ボット(Python)ならLinux VPS。スペックは最安プランで十分、月500円台から始められる
+- MT4/EAでFXをやるならWindows入りのFX特化VPSが楽
 - systemdでサービス化+自動再起動の設定までやって初めて「放置できる」状態になる
 
 次回は、実際の運用成績とボット改善の記録を公開していく予定です。
