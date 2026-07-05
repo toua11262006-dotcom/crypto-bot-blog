@@ -73,4 +73,9 @@ notify('✅ エントリー: BUY BTC/USDT @ 108,500')
 
 通知はボットの「健康診断」です。Webhook自体は3分で作れるので、ボット開発の最初期に入れておくことを強くおすすめします。ボットの24時間運用環境については[VPS運用の記事](/blog/vps-bot-24h/)をどうぞ。
 
-<!-- ここにVPSのアフィリエイトリンクを設置可 -->
+<div class="affiliate-box">
+<span class="label">PR</span>
+<p>筆者のボット+通知システムは <strong>ConoHa VPS</strong> 上で24時間動いています。セットアップ手順は<a href="/blog/vps-bot-24h/">VPS運用の記事</a>で解説しています。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" rel="nofollow">サービス開発やテスト環境に便利な【ConoHa】</a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" alt=""></p>
+</div>

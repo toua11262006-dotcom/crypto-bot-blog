@@ -40,7 +40,11 @@ heroImage: '../../assets/eyecatch/crypto-bot-basics.png'
 - **APIキーの管理**: キーが漏れると資産を失う可能性があります。出金権限は絶対に付けないでください
 - **手数料**: 取引回数が多い戦略ほど手数料の影響が大きくなります。バックテストには必ず手数料を含めましょう
 
-<!-- ここに取引所のアフィリエイトリンクを設置(例: MEXC / Bitget / Bybit 口座開設) -->
+<div class="affiliate-box">
+<span class="label">PR</span>
+<p>筆者がボット運用に使っているのは海外取引所の <strong>MEXC</strong> です(ccxt対応・低手数料・小ロットから試せる)。詳しくは<a href="/blog/mexc-api-bot-guide/">MEXCでAPI自動売買を始める手順</a>で解説しています。</p>
+<p><a href="https://promote.mexc.com/r/ZREtHSpY5h" target="_blank" rel="nofollow sponsored">MEXCの口座を無料で開設する(紹介リンク)</a></p>
+</div>
 
 ## まとめ
 

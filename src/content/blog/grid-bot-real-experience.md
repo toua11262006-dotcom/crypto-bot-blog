@@ -47,7 +47,11 @@ heroImage: '../../assets/eyecatch/grid-bot-real-experience.png'
 
 取引所選びの観点では、グリッドは注文回数が多いので**メイカー手数料の安さ**が特に重要です。詳しくは[取引所の選び方](/blog/how-to-choose-exchange/)で解説しています。
 
-<!-- ここに取引所のアフィリエイトリンクを設置可(グリッドボット内蔵の取引所訴求も相性◎) -->
+<div class="affiliate-box">
+<span class="label">PR</span>
+<p>筆者のグリッドボットは <strong>MEXC</strong> の先物市場で稼働しています。メイカー手数料が安く、注文回数の多いグリッド戦略と相性が良い取引所です。</p>
+<p><a href="https://promote.mexc.com/r/ZREtHSpY5h" target="_blank" rel="nofollow sponsored">MEXCの口座を無料で開設する(紹介リンク)</a></p>
+</div>
 
 ## まとめ
 
