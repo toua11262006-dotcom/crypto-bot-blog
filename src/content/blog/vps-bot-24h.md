@@ -21,7 +21,12 @@ heroImage: '../../assets/eyecatch/vps-bot-24h.png'
 2. **国内リージョン**: 取引所サーバーとの通信の安定性を考えると、まずは国内で問題ありません
 3. **Linuxが使えること**: Ubuntu等を選べるVPSにしましょう(Windowsプランは割高です)
 
-<!-- ここにVPSのアフィリエイトリンクを設置(例: ConoHa VPS / さくらVPS / Xserver VPS)。国内VPSはA8.net等のASPに案件があります -->
+<div class="affiliate-box">
+<span class="label">PR</span>
+<p>筆者のボットも国内VPSの <strong>ConoHa VPS</strong> 上で24時間稼働しています。最安プランは月数百円から、申し込んだその日にUbuntuサーバーが立ち上がるので、ボット運用の環境としては定番です。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" rel="nofollow">サービス開発やテスト環境に便利な【ConoHa】</a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" alt=""></p>
+</div>
 
 ## 初期設定の流れ
 
