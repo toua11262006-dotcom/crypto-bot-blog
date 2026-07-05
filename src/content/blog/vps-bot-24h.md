@@ -93,4 +93,4 @@ sudo systemctl enable --now trading-bot
 - MT4/EAでFXをやるならWindows入りのFX特化VPSが楽
 - systemdでサービス化+自動再起動の設定までやって初めて「放置できる」状態になる
 
-次回は、実際の運用成績とボット改善の記録を公開していく予定です。
+VPSが用意できたら、次は載せるボットです。[ccxtでのボット開発入門](/blog/ccxt-python-tutorial/)で作り方を、[Discord通知](/blog/discord-notification-bot/)で放置運用に必須の監視体制を解説しています。実際にVPS上で動かしているボットの成績は[グリッドボットの実運用記録](/blog/grid-bot-real-experience/)で公開中です。
