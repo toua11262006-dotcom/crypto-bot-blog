@@ -57,6 +57,9 @@ const icons = {
 		<polyline points="36,36 24,50 36,64" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 		<polyline points="64,36 76,50 64,64" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 		<line x1="56" y1="30" x2="44" y2="70" stroke="${c}" stroke-width="6" stroke-linecap="round"/>`,
+	send: (c) => `
+		<path d="M22 52 L80 24 L58 78 L45 58 Z" fill="none" stroke="${c}" stroke-width="6" stroke-linejoin="round"/>
+		<line x1="45" y1="58" x2="80" y2="24" stroke="${c}" stroke-width="5" stroke-linecap="round"/>`,
 	calc: (c) => `
 		<rect x="30" y="18" width="40" height="64" rx="7" fill="none" stroke="${c}" stroke-width="6"/>
 		<rect x="38" y="26" width="24" height="12" rx="2" fill="${c}"/>
@@ -85,6 +88,7 @@ const posts = [
 	{ slug: 'ccxt-python-tutorial', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'code', title: 'Python×ccxt入門' },
 	{ slug: 'mexc-api-bot-guide', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '取引所', icon: 'plug', title: 'MEXCでAPI自動売買' },
 	{ slug: 'crypto-bot-tax-guide', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'calc', title: 'ボット運用者の確定申告' },
+	{ slug: 'domestic-to-mexc-transfer', bg: '#4A1B0C', mid: '#F0997B', light: '#FAECE7', chipB: '#993C1D', chipT: '#F5C4B3', cat: '送金', icon: 'send', title: '国内取引所→MEXC送金' },
 ];
 
 function svgFor(p) {
