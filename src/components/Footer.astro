@@ -1,0 +1,34 @@
+---
+import { SITE_TITLE } from '../consts';
+
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-links">
+		<a href="/about">運営者情報</a>
+		<a href="/privacy">プライバシーポリシー・免責事項</a>
+	</div>
+	&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.footer-links {
+		display: flex;
+		justify-content: center;
+		gap: 1.5em;
+		margin-bottom: 1em;
+	}
+	.footer-links a {
+		color: rgb(var(--gray));
+		text-decoration: none;
+	}
+	.footer-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>

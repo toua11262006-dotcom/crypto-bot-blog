@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<Layout
+	title="運営者情報"
+	description={`${SITE_TITLE}の運営者情報ページです。`}
+	pubDate={new Date('2026-07-05')}
+	hideAdDisclosure
+>
+	<h2>このブログについて</h2>
+	<p>
+		「{SITE_TITLE}」は、BTC(ビットコイン)の自動売買ボットを実際に開発・運用している筆者が、
+		その過程で得た知識やノウハウを共有するブログです。
+	</p>
+	<ul>
+		<li>自動売買ボットの仕組み・戦略の解説</li>
+		<li>バックテストや実運用の記録</li>
+		<li>VPSでのボット24時間運用の方法</li>
+		<li>仮想通貨取引所の使い方・比較</li>
+	</ul>
+
+	<h2>運営者</h2>
+	<p>
+		個人でBTC/USDTの自動売買ボットをVPS上で24時間運用しています。
+		戦略設計からバックテスト、本番運用までをすべて自分で行っており、
+		このブログではその実体験に基づいた情報だけを発信します。
+	</p>
+
+	<h2>お問い合わせ</h2>
+	<p>
+		お問い合わせは <a href="https://x.com/" target="_blank" rel="noopener">X(旧Twitter)</a> のDMまでお願いします。
+		<!-- TODO: 自分のXアカウントURLに差し替え。メールフォームを使う場合はGoogleフォーム等のリンクに変更 -->
+	</p>
+</Layout>
