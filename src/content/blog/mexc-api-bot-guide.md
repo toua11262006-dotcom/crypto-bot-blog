@@ -2,7 +2,7 @@
 title: 'MEXCでAPI自動売買を始める手順|実際にボットを動かして分かった癖と対策'
 description: '海外取引所MEXCでAPIキーを発行して自動売買ボットを動かすまでの手順と、実運用で判明したMEXC APIの癖(レートリミット・反映遅延)への対策を解説します。'
 pubDate: '2026-07-05'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/eyecatch/mexc-api-bot-guide.png'
 ---
 
 私は自作のBTC自動売買ボットを海外取引所の**MEXC**で動かしています。この記事では、MEXCでAPI取引を始める手順と、**実際に運用して初めて分かったAPIの癖**を共有します。

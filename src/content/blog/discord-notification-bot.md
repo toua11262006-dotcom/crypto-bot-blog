@@ -2,7 +2,7 @@
 title: '自動売買ボットの稼働状況をDiscordに通知する方法【Python実装例つき】'
 description: '自動売買ボットの監視にはDiscord Webhookが最適。Pythonでの実装例と、実運用で踏んだ403エラーの対処法、通知設計のコツを実体験から解説します。'
 pubDate: '2026-07-05'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/eyecatch/discord-notification-bot.png'
 ---
 
 自動売買ボットを24時間運用するうえで、実は売買ロジックと同じくらい重要なのが**通知の仕組み**です。私のボットはDiscordに通知を送る設計にしており、スマホひとつで稼働状況を把握できます。

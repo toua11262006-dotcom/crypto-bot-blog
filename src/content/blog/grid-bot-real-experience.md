@@ -2,7 +2,7 @@
 title: 'グリッドトレードは本当に稼げる?BTCで実運用して分かった現実'
 description: 'BTCのグリッドボットを実際に運用している筆者が、レンジ設定の決め方・暴落対策・現実的な収益感覚を、実運用とバックテストの経験から正直に解説します。'
 pubDate: '2026-07-05'
-heroImage: '../../assets/blog-placeholder-about.jpg'
+heroImage: '../../assets/eyecatch/grid-bot-real-experience.png'
 ---
 
 「グリッドトレードはほったらかしで稼げる」とよく言われますが、実際に自作のグリッドボットをBTCで運用している立場から、現実を正直に書きます。

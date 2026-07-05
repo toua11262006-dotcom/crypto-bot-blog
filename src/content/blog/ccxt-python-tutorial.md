@@ -2,7 +2,7 @@
 title: 'Python+ccxtで仮想通貨ボットを自作する第一歩【コード付き入門】'
 description: '仮想通貨の自動売買ボット自作に必須のライブラリccxtの入門解説。価格取得から残高確認、注文までの実際のPythonコードを、ボット実運用者が紹介します。'
 pubDate: '2026-07-05'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/eyecatch/ccxt-python-tutorial.png'
 ---
 
 「自動売買ボットを自作してみたい」と思ったとき、最初に覚えるべきライブラリが **ccxt** です。私のボットもccxtの上に組んでいます。この記事では、価格取得から注文までの最初の一歩をコード付きで解説します。
