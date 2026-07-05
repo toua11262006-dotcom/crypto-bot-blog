@@ -57,6 +57,15 @@ const icons = {
 		<polyline points="36,36 24,50 36,64" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 		<polyline points="64,36 76,50 64,64" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 		<line x1="56" y1="30" x2="44" y2="70" stroke="${c}" stroke-width="6" stroke-linecap="round"/>`,
+	calc: (c) => `
+		<rect x="30" y="18" width="40" height="64" rx="7" fill="none" stroke="${c}" stroke-width="6"/>
+		<rect x="38" y="26" width="24" height="12" rx="2" fill="${c}"/>
+		<circle cx="41" cy="52" r="3.5" fill="${c}"/>
+		<circle cx="52" cy="52" r="3.5" fill="${c}"/>
+		<circle cx="63" cy="52" r="3.5" fill="${c}"/>
+		<circle cx="41" cy="64" r="3.5" fill="${c}"/>
+		<circle cx="52" cy="64" r="3.5" fill="${c}"/>
+		<circle cx="63" cy="64" r="3.5" fill="${c}"/>`,
 	plug: (c) => `
 		<circle cx="50" cy="54" r="20" fill="none" stroke="${c}" stroke-width="6"/>
 		<line x1="42" y1="34" x2="42" y2="20" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
@@ -75,6 +84,7 @@ const posts = [
 	{ slug: 'api-key-security', bg: '#501313', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'セキュリティ', icon: 'lock', title: 'APIキーの安全管理' },
 	{ slug: 'ccxt-python-tutorial', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'code', title: 'Python×ccxt入門' },
 	{ slug: 'mexc-api-bot-guide', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '取引所', icon: 'plug', title: 'MEXCでAPI自動売買' },
+	{ slug: 'crypto-bot-tax-guide', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'calc', title: 'ボット運用者の確定申告' },
 ];
 
 function svgFor(p) {
