@@ -23,6 +23,7 @@ import HeaderLink from './HeaderLink.astro';
 	h2 {
 		margin: 0;
 		font-size: 1em;
+		white-space: nowrap;
 	}
 
 	h2 a,
@@ -51,6 +52,14 @@ import HeaderLink from './HeaderLink.astro';
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		nav a {
+			padding: 0.8em 0.4em;
+			font-size: 0.85em;
+			border-bottom-width: 3px;
+		}
+		.internal-links {
+			white-space: nowrap;
 		}
 	}
 </style>

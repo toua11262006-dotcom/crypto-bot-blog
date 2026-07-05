@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
@@ -8,7 +9,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 5);
+	.slice(0, 6);
 ---
 
 <!doctype html>
@@ -16,38 +17,187 @@ const posts = (await getCollection('blog'))
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			main {
+				width: 960px;
+			}
+			/* ヒーロー */
 			.hero {
-				padding: 1em 0 2em 0;
+				background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+				border-radius: 16px;
+				padding: 3em 2.5em;
+				color: #fff;
+				margin-bottom: 2.5em;
+				box-shadow: var(--box-shadow);
+			}
+			.hero .badge {
+				display: inline-block;
+				background: rgba(255, 255, 255, 0.18);
+				border: 1px solid rgba(255, 255, 255, 0.35);
+				border-radius: 999px;
+				padding: 0.2em 1em;
+				font-size: 0.75em;
+				letter-spacing: 0.05em;
+				margin-bottom: 1em;
 			}
 			.hero h1 {
-				font-size: 2.2em;
+				color: #fff;
+				font-size: 2.4em;
+				margin-bottom: 0.4em;
+				line-height: 1.25;
+			}
+			.hero p {
+				color: rgba(255, 255, 255, 0.92);
+				font-size: 0.95em;
+				max-width: 34em;
+				margin-bottom: 1.6em;
+			}
+			.hero-actions {
+				display: flex;
+				gap: 1em;
+				flex-wrap: wrap;
+			}
+			.btn {
+				display: inline-block;
+				border-radius: 8px;
+				padding: 0.55em 1.4em;
+				font-weight: 700;
+				text-decoration: none;
+				font-size: 0.9em;
+				transition: 0.2s ease;
+			}
+			.btn-primary {
+				background: #fff;
+				color: var(--accent-dark);
+			}
+			.btn-primary:hover {
+				transform: translateY(-2px);
+				color: var(--accent);
+			}
+			.btn-ghost {
+				border: 2px solid rgba(255, 255, 255, 0.7);
+				color: #fff;
+			}
+			.btn-ghost:hover {
+				background: rgba(255, 255, 255, 0.15);
+				color: #fff;
+			}
+			/* 特徴カード */
+			.features {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.2em;
+				margin-bottom: 3em;
+			}
+			.feature {
+				background: #fff;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 12px;
+				padding: 1.4em 1.5em;
+			}
+			.feature .icon {
+				font-size: 1.8em;
+				line-height: 1;
 				margin-bottom: 0.4em;
 			}
-			.recent-posts ul {
+			.feature h3 {
+				font-size: 1.05em;
+				margin-bottom: 0.4em;
+			}
+			.feature p {
+				font-size: 0.8em;
+				color: rgb(var(--gray));
+				margin: 0;
+			}
+			/* 新着記事 */
+			.section-head {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				margin-bottom: 1em;
+			}
+			.section-head h2 {
+				font-size: 1.6em;
+				margin: 0;
+			}
+			.section-head a {
+				font-size: 0.85em;
+				text-decoration: none;
+				font-weight: 700;
+			}
+			.post-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
 				list-style: none;
 				margin: 0;
 				padding: 0;
 			}
-			.recent-posts li {
-				margin-bottom: 1.2em;
+			.post-card {
+				background: #fff;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 12px;
+				overflow: hidden;
+				transition: 0.2s ease;
 			}
-			.recent-posts a {
-				text-decoration: none;
-				color: rgb(var(--black));
-				font-size: 1.15em;
-				font-weight: 700;
+			.post-card:hover {
+				box-shadow: 0 6px 20px rgba(var(--gray), 30%);
+				transform: translateY(-3px);
 			}
-			.recent-posts a:hover {
-				color: rgb(var(--accent));
-			}
-			.recent-posts .date {
+			.post-card a {
 				display: block;
-				color: rgb(var(--gray));
-				font-size: 0.9em;
+				text-decoration: none;
+				color: inherit;
+				height: 100%;
 			}
-			.all-posts-link {
-				display: inline-block;
-				margin-top: 1em;
+			.post-card img {
+				width: 100%;
+				height: auto;
+				display: block;
+				border-radius: 0;
+			}
+			.post-body {
+				padding: 1em 1.2em 1.2em;
+			}
+			.post-body .title {
+				font-size: 0.95em;
+				font-weight: 700;
+				color: rgb(var(--black));
+				line-height: 1.45;
+				margin: 0 0 0.5em 0;
+			}
+			.post-card:hover .title {
+				color: var(--accent);
+			}
+			.post-body .desc {
+				font-size: 0.75em;
+				color: rgb(var(--gray));
+				margin: 0 0 0.6em 0;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.post-body .date {
+				font-size: 0.7em;
+				color: rgb(var(--gray));
+			}
+			@media (max-width: 900px) {
+				.features,
+				.post-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media (max-width: 600px) {
+				.hero {
+					padding: 2em 1.4em;
+				}
+				.hero h1 {
+					font-size: 1.7em;
+				}
+				.features,
+				.post-grid {
+					grid-template-columns: 1fr;
+				}
 			}
 		</style>
 	</head>
@@ -55,27 +205,61 @@ const posts = (await getCollection('blog'))
 		<Header />
 		<main>
 			<section class="hero">
-				<h1>{SITE_TITLE}</h1>
+				<span class="badge">BTC自動売買ボット 実運用中</span>
+				<h1>作って、検証して、<br />24時間動かす。</h1>
 				<p>
-					BTCの自動売買ボットを実際に開発・運用している筆者が、ボットの仕組み・バックテスト・VPSでの
-					24時間運用ノウハウ・仮想通貨取引所の使い方を、実体験ベースで解説するブログです。
+					{SITE_TITLE}は、BTC自動売買ボットを実際に開発・運用している筆者による記録です。
+					バックテストの数字も、恥ずかしい失敗談も、そのまま公開しています。
 				</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="/blog/crypto-bot-basics/">はじめての方はこちら</a>
+					<a class="btn btn-ghost" href="/blog/">記事一覧を見る</a>
+				</div>
 			</section>
-			<section class="recent-posts">
-				<h2>最新記事</h2>
-				<ul>
+
+			<section class="features">
+				<div class="feature">
+					<div class="icon">📊</div>
+					<h3>実運用の一次情報</h3>
+					<p>バックテストと本番運用に基づく数字だけを書きます。「月利◯◯%」の夢は売りません。</p>
+				</div>
+				<div class="feature">
+					<div class="icon">🛠️</div>
+					<h3>コード付きで解説</h3>
+					<p>Python・ccxt・VPS構築まで、実際に動かしている構成をコード付きで紹介します。</p>
+				</div>
+				<div class="feature">
+					<div class="icon">💥</div>
+					<h3>失敗談も全部公開</h3>
+					<p>休眠バグ、バックテストの崩壊…。損した経験こそ、次に始める人の資産になります。</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-head">
+					<h2>新着記事</h2>
+					<a href="/blog/">すべて見る →</a>
+				</div>
+				<ul class="post-grid">
 					{
 						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
-								<span class="date">
-									<FormattedDate date={post.data.pubDate} />
-								</span>
+							<li class="post-card">
+								<a href={`/blog/${post.id}/`}>
+									{post.data.heroImage && (
+										<Image width={480} height={240} src={post.data.heroImage} alt="" />
+									)}
+									<div class="post-body">
+										<h3 class="title">{post.data.title}</h3>
+										<p class="desc">{post.data.description}</p>
+										<span class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</span>
+									</div>
+								</a>
 							</li>
 						))
 					}
 				</ul>
-				<a class="all-posts-link" href="/blog">記事一覧を見る →</a>
 			</section>
 		</main>
 		<Footer />
