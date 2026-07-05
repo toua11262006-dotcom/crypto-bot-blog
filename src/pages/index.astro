@@ -108,6 +108,67 @@ const posts = (await getCollection('blog'))
 				color: rgb(var(--gray));
 				margin: 0;
 			}
+			/* はじめての方ロードマップ */
+			.roadmap {
+				margin-bottom: 3em;
+			}
+			.roadmap h2 {
+				font-size: 1.6em;
+				margin-bottom: 0.3em;
+			}
+			.roadmap .lead {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin-bottom: 1.2em;
+			}
+			.roadmap ol {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.roadmap li {
+				position: relative;
+				padding: 0 0 1.4em 3.4em;
+			}
+			.roadmap li:not(:last-child)::before {
+				content: '';
+				position: absolute;
+				left: 1.1em;
+				top: 2.4em;
+				bottom: 0.2em;
+				width: 3px;
+				background: rgb(var(--gray-light));
+				border-radius: 2px;
+			}
+			.roadmap .step-num {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 2.2em;
+				height: 2.2em;
+				border-radius: 50%;
+				background: var(--accent);
+				color: #fff;
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1em;
+			}
+			.roadmap a {
+				font-weight: 700;
+				font-size: 1.05em;
+				text-decoration: none;
+				color: rgb(var(--black));
+			}
+			.roadmap a:hover {
+				color: var(--accent);
+			}
+			.roadmap .step-desc {
+				margin: 0.15em 0 0 0;
+				font-size: 0.82em;
+				color: rgb(var(--gray));
+			}
 			/* 新着記事 */
 			.section-head {
 				display: flex;
@@ -233,6 +294,55 @@ const posts = (await getCollection('blog'))
 					<h3>失敗談も全部公開</h3>
 					<p>休眠バグ、バックテストの崩壊…。損した経験こそ、次に始める人の資産になります。</p>
 				</div>
+			</section>
+
+			<section class="roadmap">
+				<h2>はじめてボットを作る人はここから</h2>
+				<p class="lead">
+					「何から始めればいいか分からない」という方向けに、読む順番をステップにしました。上から順に読めば、仕組みの理解から24時間運用まで一通りたどり着けます。
+				</p>
+				<ol>
+					<li>
+						<span class="step-num">1</span>
+						<a href="/blog/crypto-bot-basics/">自動売買ボットの仕組みを知る</a>
+						<p class="step-desc">ボットとは何か、代表的な戦略、始め方の全体像をつかみます</p>
+					</li>
+					<li>
+						<span class="step-num">2</span>
+						<a href="/blog/how-to-choose-exchange/">取引所を選んで口座を作る</a>
+						<p class="step-desc">API対応・手数料・流動性。ボット運用に向いた取引所の条件を解説</p>
+					</li>
+					<li>
+						<span class="step-num">3</span>
+						<a href="/blog/domestic-to-mexc-transfer/">資金を海外取引所へ送金する</a>
+						<p class="step-desc">手数料を抑える通貨の選び方と、資産を失わないための鉄則</p>
+					</li>
+					<li>
+						<span class="step-num">4</span>
+						<a href="/blog/api-key-security/">APIキーを安全に発行・管理する</a>
+						<p class="step-desc">出金権限OFF・IP制限など、資産を守る5つの鉄則</p>
+					</li>
+					<li>
+						<span class="step-num">5</span>
+						<a href="/blog/ccxt-python-tutorial/">Pythonでボットを作る</a>
+						<p class="step-desc">ccxtで価格取得から注文まで。コード付きの最初の一歩</p>
+					</li>
+					<li>
+						<span class="step-num">6</span>
+						<a href="/blog/backtest-pitfalls/">バックテストで検証する</a>
+						<p class="step-desc">「バックテストでは勝てるのに本番で勝てない」を防ぐ3つの罠</p>
+					</li>
+					<li>
+						<span class="step-num">7</span>
+						<a href="/blog/vps-bot-24h/">VPSで24時間動かす</a>
+						<p class="step-desc">実運用中の構成を公開。サービス化と自動再起動まで</p>
+					</li>
+					<li>
+						<span class="step-num">8</span>
+						<a href="/blog/discord-notification-bot/">Discord通知で監視する</a>
+						<p class="step-desc">「静かな故障」に気づける通知設計。Python実装例つき</p>
+					</li>
+				</ol>
 			</section>
 
 			<section>
