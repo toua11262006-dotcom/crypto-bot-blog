@@ -6,9 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	// TODO: 独自ドメイン取得後、またはCloudflare Pagesデプロイ後に実際のURLへ変更
-	// (例: 'https://bot-lab.pages.dev' や 'https://your-domain.com')
-	site: 'https://example.com',
+	// 独自ドメイン取得後はここを変更
+	site: 'https://crypto-bot-blog.pages.dev',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
