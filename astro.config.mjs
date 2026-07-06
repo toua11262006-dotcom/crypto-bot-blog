@@ -6,8 +6,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	// 独自ドメイン取得後はここを変更
-	site: 'https://crypto-bot-blog.pages.dev',
+	site: 'https://botunyo-lab.dev',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
