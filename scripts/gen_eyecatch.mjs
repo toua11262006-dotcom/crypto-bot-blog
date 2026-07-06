@@ -74,6 +74,12 @@ const icons = {
 		<line x1="42" y1="34" x2="42" y2="20" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
 		<line x1="58" y1="34" x2="58" y2="20" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
 		<line x1="50" y1="74" x2="50" y2="84" stroke="${c}" stroke-width="6" stroke-linecap="round"/>`,
+	coins: (c) => `
+		<ellipse cx="50" cy="32" rx="22" ry="8" fill="none" stroke="${c}" stroke-width="5"/>
+		<ellipse cx="50" cy="50" rx="22" ry="8" fill="none" stroke="${c}" stroke-width="5"/>
+		<ellipse cx="50" cy="68" rx="22" ry="8" fill="none" stroke="${c}" stroke-width="5"/>
+		<line x1="28" y1="32" x2="28" y2="68" stroke="${c}" stroke-width="5"/>
+		<line x1="72" y1="32" x2="72" y2="68" stroke="${c}" stroke-width="5"/>`,
 };
 
 const posts = [
@@ -89,6 +95,7 @@ const posts = [
 	{ slug: 'mexc-api-bot-guide', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '取引所', icon: 'plug', title: 'MEXCでAPI自動売買' },
 	{ slug: 'crypto-bot-tax-guide', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'calc', title: 'ボット運用者の確定申告' },
 	{ slug: 'domestic-to-mexc-transfer', bg: '#4A1B0C', mid: '#F0997B', light: '#FAECE7', chipB: '#993C1D', chipT: '#F5C4B3', cat: '送金', icon: 'send', title: '国内取引所→MEXC送金' },
+	{ slug: 'btc-dca-bot', bg: '#033B47', mid: '#5CC6D6', light: '#E0F4F7', chipB: '#0F6979', chipT: '#A7E2EC', cat: '積立', icon: 'coins', title: 'DCA積立ボットの作り方' },
 ];
 
 function svgFor(p) {
