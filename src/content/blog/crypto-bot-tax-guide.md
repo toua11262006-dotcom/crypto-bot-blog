@@ -60,7 +60,12 @@ heroImage: '../../assets/eyecatch/crypto-bot-tax-guide.png'
 - **クリプタクト(Cryptact)** — 対応取引所・コインが多い定番
 - **Gtax** — こちらも国内定番。無料枠あり
 
-<!-- ここにクリプタクト/Gtax のアフィリエイトリンクを設置(ASP提携通過後) -->
+<div class="affiliate-box">
+<span class="label">PR</span>
+<p>ボット運用者の確定申告で定番なのが<strong>クリプタクト(Cryptact)</strong>です。取引所のAPI連携や取引履歴CSVの取り込みで、年間何千回もの取引の損益計算(移動平均法/総平均法)と円換算を自動化できます。無料から使えるので、まず取引履歴を取り込んでみるのがおすすめです。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4B7U10+4CL0VM+4DGW+5YRHE" rel="nofollow">完全無料の仮想通貨税金計算サービス【CRYPTACT(クリプタクト)】</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B7U10+4CL0VM+4DGW+5YRHE" alt=""></p>
+</div>
 
 ボット運用者向けのコツをひとつ: **取引履歴のCSVは月1回など定期的にダウンロードして保管**しておきましょう。取引所によっては過去履歴の取得期間に制限があり、年末にまとめて取ろうとすると取れないことがあります。
 
