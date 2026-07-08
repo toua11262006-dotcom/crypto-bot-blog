@@ -22,12 +22,27 @@ const posts = (await getCollection('blog'))
 			}
 			/* ヒーロー */
 			.hero {
+				position: relative;
+				overflow: hidden;
 				background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
 				border-radius: 16px;
 				padding: 3em 2.5em;
 				color: #fff;
 				margin-bottom: 2.5em;
 				box-shadow: var(--box-shadow);
+			}
+			.hero::after {
+				content: '';
+				position: absolute;
+				top: -40%;
+				right: -10%;
+				width: 380px;
+				height: 380px;
+				background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 70%);
+				pointer-events: none;
+			}
+			.hero > * {
+				position: relative;
 			}
 			.hero .badge {
 				display: inline-block;
@@ -81,6 +96,15 @@ const posts = (await getCollection('blog'))
 				background: rgba(255, 255, 255, 0.15);
 				color: #fff;
 			}
+			.btn-primary-solid {
+				background: var(--accent);
+				color: #fff;
+			}
+			.btn-primary-solid:hover {
+				background: var(--accent-dark);
+				color: #fff;
+				transform: translateY(-2px);
+			}
 			/* 特徴カード */
 			.features {
 				display: grid;
@@ -107,6 +131,23 @@ const posts = (await getCollection('blog'))
 				font-size: 0.8em;
 				color: rgb(var(--gray));
 				margin: 0;
+			}
+			/* セクション見出し共通(アクセントバー) */
+			.roadmap h2,
+			.section-head h2 {
+				position: relative;
+				padding-left: 0.55em;
+			}
+			.roadmap h2::before,
+			.section-head h2::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0.12em;
+				bottom: 0.12em;
+				width: 5px;
+				border-radius: 3px;
+				background: var(--accent);
 			}
 			/* はじめての方ロードマップ */
 			.roadmap {
@@ -238,9 +279,53 @@ const posts = (await getCollection('blog'))
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 			}
+			.post-body .card-foot {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 0.7em;
+			}
 			.post-body .date {
 				font-size: 0.7em;
 				color: rgb(var(--gray));
+			}
+			.post-body .more {
+				font-size: 0.72em;
+				font-weight: 700;
+				color: var(--accent);
+			}
+			/* 無料ツール CTA カード */
+			.tool-callout {
+				display: flex;
+				gap: 1.3em;
+				align-items: flex-start;
+				background:
+					linear-gradient(135deg, rgba(35, 55, 255, 0.07), rgba(35, 55, 255, 0.02));
+				border: 1px solid rgba(35, 55, 255, 0.22);
+				border-radius: 16px;
+				padding: 1.7em 1.9em;
+				margin-bottom: 3em;
+			}
+			.tool-callout .tool-icon {
+				flex-shrink: 0;
+				width: 3em;
+				height: 3em;
+				border-radius: 12px;
+				background: var(--accent);
+				color: #fff;
+				font-size: 1.4em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.tool-callout h2 {
+				font-size: 1.35em;
+				margin: 0 0 0.3em 0;
+			}
+			.tool-callout p {
+				font-size: 0.85em;
+				color: rgb(var(--gray-dark));
+				margin: 0 0 1em 0;
 			}
 			@media (max-width: 900px) {
 				.features,
@@ -345,15 +430,18 @@ const posts = (await getCollection('blog'))
 				</ol>
 			</section>
 
-			<section class="tools">
-				<div class="section-head">
+			<section class="tool-callout">
+				<div class="tool-icon">🧮</div>
+				<div>
 					<h2>無料ツール</h2>
-				</div>
-				<p>
-					1回の取引の損益と税金をその場で概算できる<a href="https://crypto-pnl-calc.pages.dev/">仮想通貨 損益・税金計算ツール</a>を公開しています。買値・売値・数量とその年の他の所得を入れるだけで、実現損益と日本の雑所得・総合課税にもとづく概算税額が出て、結果をAIが平易に解説します(登録不要・無料)。
-				</p>
-				<div class="hero-actions">
-					<a class="btn btn-primary" href="https://crypto-pnl-calc.pages.dev/">損益・税金計算ツールを開く</a>
+					<p>
+						1回の取引の損益と税金をその場で概算できる<a
+							href="https://crypto-pnl-calc.pages.dev/">仮想通貨 損益・税金計算ツール</a
+						>を公開しています。買値・売値・数量とその年の他の所得を入れるだけで、実現損益と日本の雑所得・総合課税にもとづく概算税額が出て、結果をAIが平易に解説します(登録不要・無料)。
+					</p>
+					<a class="btn btn-primary-solid" href="https://crypto-pnl-calc.pages.dev/"
+						>損益・税金計算ツールを開く →</a
+					>
 				</div>
 			</section>
 
@@ -373,9 +461,12 @@ const posts = (await getCollection('blog'))
 									<div class="post-body">
 										<h3 class="title">{post.data.title}</h3>
 										<p class="desc">{post.data.description}</p>
-										<span class="date">
-											<FormattedDate date={post.data.pubDate} />
-										</span>
+										<div class="card-foot">
+											<span class="date">
+												<FormattedDate date={post.data.pubDate} />
+											</span>
+											<span class="more">続きを読む →</span>
+										</div>
 									</div>
 								</a>
 							</li>
