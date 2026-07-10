@@ -7,9 +7,11 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
-const posts = (await getCollection('blog'))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 6);
+const allPosts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const posts = allPosts.slice(0, 6);
+const totalPosts = allPosts.length;
 ---
 
 <!doctype html>
@@ -38,11 +40,43 @@ const posts = (await getCollection('blog'))
 				right: -10%;
 				width: 380px;
 				height: 380px;
-				background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 70%);
+				background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
 				pointer-events: none;
+				z-index: 0;
+			}
+			.hero::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+				background-size: 22px 22px;
+				mask-image: linear-gradient(120deg, #000 20%, transparent 75%);
+				-webkit-mask-image: linear-gradient(120deg, #000 20%, transparent 75%);
+				pointer-events: none;
+				z-index: 0;
 			}
 			.hero > * {
 				position: relative;
+				z-index: 1;
+			}
+			.hero-meta {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.9em;
+				margin-top: 1.6em;
+				font-size: 0.78em;
+				color: rgba(255, 255, 255, 0.85);
+			}
+			.hero-meta .dot {
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.45);
+			}
+			.hero-meta strong {
+				color: #fff;
+				font-size: 1.15em;
 			}
 			.hero .badge {
 				display: inline-block;
@@ -113,15 +147,54 @@ const posts = (await getCollection('blog'))
 				margin-bottom: 3em;
 			}
 			.feature {
+				display: block;
+				text-decoration: none;
+				color: inherit;
 				background: #fff;
 				border: 1px solid rgb(var(--gray-light));
-				border-radius: 12px;
-				padding: 1.4em 1.5em;
+				border-radius: 14px;
+				padding: 1.5em 1.5em;
+				transition: 0.2s ease;
+			}
+			.feature:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 22px rgba(var(--gray), 22%);
+				border-color: transparent;
+			}
+			.feature h3 {
+				transition: color 0.2s ease;
+			}
+			.feature:hover h3 {
+				color: var(--accent);
+			}
+			.feature h3::after {
+				content: ' →';
+				color: var(--accent);
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+			.feature:hover h3::after {
+				opacity: 1;
 			}
 			.feature .icon {
-				font-size: 1.8em;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.5em;
+				height: 2.5em;
+				border-radius: 12px;
+				font-size: 1.3em;
 				line-height: 1;
-				margin-bottom: 0.4em;
+				margin-bottom: 0.8em;
+			}
+			.feature.f1 .icon {
+				background: #e6f1fb;
+			}
+			.feature.f2 .icon {
+				background: #e1f5ee;
+			}
+			.feature.f3 .icon {
+				background: #faece7;
 			}
 			.feature h3 {
 				font-size: 1.05em;
@@ -361,24 +434,31 @@ const posts = (await getCollection('blog'))
 					<a class="btn btn-primary" href="/blog/crypto-bot-basics/">はじめての方はこちら</a>
 					<a class="btn btn-ghost" href="/blog/">記事一覧を見る</a>
 				</div>
+				<div class="hero-meta">
+					<span><strong>{totalPosts}</strong> 記事</span>
+					<span class="dot"></span>
+					<span>実運用中のBTCボット</span>
+					<span class="dot"></span>
+					<span>コード付き解説</span>
+				</div>
 			</section>
 
 			<section class="features">
-				<div class="feature">
+				<a class="feature f1" href="/blog/backtest-pitfalls/">
 					<div class="icon">📊</div>
 					<h3>実運用の一次情報</h3>
 					<p>バックテストと本番運用に基づく数字だけを書きます。「月利◯◯%」の夢は売りません。</p>
-				</div>
-				<div class="feature">
+				</a>
+				<a class="feature f2" href="/blog/ccxt-python-tutorial/">
 					<div class="icon">🛠️</div>
 					<h3>コード付きで解説</h3>
 					<p>Python・ccxt・VPS構築まで、実際に動かしている構成をコード付きで紹介します。</p>
-				</div>
-				<div class="feature">
+				</a>
+				<a class="feature f3" href="/blog/bot-dormant-bug-story/">
 					<div class="icon">💥</div>
 					<h3>失敗談も全部公開</h3>
 					<p>休眠バグ、バックテストの崩壊…。損した経験こそ、次に始める人の資産になります。</p>
-				</div>
+				</a>
 			</section>
 
 			<section class="roadmap">
