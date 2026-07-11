@@ -83,6 +83,10 @@ const icons = {
 	shield: (c) => `
 		<path d="M50 18 L78 28 V50 C78 66 66 78 50 84 C34 78 22 66 22 50 V28 Z" fill="none" stroke="${c}" stroke-width="6" stroke-linejoin="round"/>
 		<polyline points="40,50 47,58 62,42" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>`,
+	target: (c) => `
+		<circle cx="50" cy="50" r="28" fill="none" stroke="${c}" stroke-width="6"/>
+		<circle cx="50" cy="50" r="16" fill="none" stroke="${c}" stroke-width="6"/>
+		<circle cx="50" cy="50" r="4.5" fill="${c}"/>`,
 };
 
 const posts = [
@@ -100,6 +104,7 @@ const posts = [
 	{ slug: 'domestic-to-mexc-transfer', bg: '#4A1B0C', mid: '#F0997B', light: '#FAECE7', chipB: '#993C1D', chipT: '#F5C4B3', cat: '送金', icon: 'send', title: '国内取引所→MEXC送金' },
 	{ slug: 'btc-dca-bot', bg: '#033B47', mid: '#5CC6D6', light: '#E0F4F7', chipB: '#0F6979', chipT: '#A7E2EC', cat: '積立', icon: 'coins', title: 'DCA積立ボットの作り方' },
 	{ slug: 'bot-risk-management', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'shield', title: '資金管理・リスク管理' },
+	{ slug: 'is-bot-profitable', bg: '#3D2B08', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '期待値', icon: 'target', title: 'ボットは儲かるのか?' },
 ];
 
 function svgFor(p) {
