@@ -93,6 +93,16 @@ const icons = {
 		<line x1="36" y1="76" x2="64" y2="76" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
 		<path d="M26 30 L16 52 a10 8 0 0 0 20 0 Z" fill="none" stroke="${c}" stroke-width="5" stroke-linejoin="round"/>
 		<path d="M74 30 L64 52 a10 8 0 0 0 20 0 Z" fill="none" stroke="${c}" stroke-width="5" stroke-linejoin="round"/>`,
+	brain: (c) => `
+		<circle cx="30" cy="30" r="7" fill="none" stroke="${c}" stroke-width="5"/>
+		<circle cx="30" cy="70" r="7" fill="none" stroke="${c}" stroke-width="5"/>
+		<circle cx="70" cy="20" r="7" fill="none" stroke="${c}" stroke-width="5"/>
+		<circle cx="70" cy="50" r="7" fill="none" stroke="${c}" stroke-width="5"/>
+		<circle cx="70" cy="80" r="7" fill="none" stroke="${c}" stroke-width="5"/>
+		<line x1="36" y1="30" x2="64" y2="20" stroke="${c}" stroke-width="4"/>
+		<line x1="36" y1="30" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
+		<line x1="36" y1="70" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
+		<line x1="36" y1="70" x2="64" y2="80" stroke="${c}" stroke-width="4"/>`,
 };
 
 const posts = [
@@ -112,6 +122,7 @@ const posts = [
 	{ slug: 'bot-risk-management', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'shield', title: '資金管理・リスク管理' },
 	{ slug: 'is-bot-profitable', bg: '#3D2B08', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '期待値', icon: 'target', title: 'ボットは儲かるのか?' },
 	{ slug: 'vps-comparison', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '比較', icon: 'scale', title: 'VPS徹底比較' },
+	{ slug: 'lightgbm-signal-tutorial', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '機械学習', icon: 'brain', title: 'LightGBM入門' },
 ];
 
 function svgFor(p) {
