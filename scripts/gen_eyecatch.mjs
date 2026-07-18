@@ -103,6 +103,12 @@ const icons = {
 		<line x1="36" y1="30" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="80" stroke="${c}" stroke-width="4"/>`,
+	gauge: (c) => `
+		<path d="M20 66 A30 30 0 0 1 80 66" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
+		<line x1="50" y1="66" x2="66" y2="42" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
+		<circle cx="50" cy="66" r="5" fill="${c}"/>
+		<circle cx="20" cy="66" r="3.5" fill="${c}"/>
+		<circle cx="80" cy="66" r="3.5" fill="${c}"/>`,
 };
 
 const posts = [
@@ -123,6 +129,7 @@ const posts = [
 	{ slug: 'is-bot-profitable', bg: '#3D2B08', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '期待値', icon: 'target', title: 'ボットは儲かるのか?' },
 	{ slug: 'vps-comparison', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '比較', icon: 'scale', title: 'VPS徹底比較' },
 	{ slug: 'lightgbm-signal-tutorial', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '機械学習', icon: 'brain', title: 'LightGBM入門' },
+	{ slug: 'trading-metrics-guide', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '成績指標', icon: 'gauge', title: '成績指標の読み方' },
 ];
 
 function svgFor(p) {
