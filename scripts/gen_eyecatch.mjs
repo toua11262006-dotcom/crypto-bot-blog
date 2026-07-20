@@ -103,6 +103,13 @@ const icons = {
 		<line x1="36" y1="30" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="80" stroke="${c}" stroke-width="4"/>`,
+	book: (c) => `
+		<path d="M50 28 C42 22 30 20 20 22 V72 C30 70 42 72 50 78 C58 72 70 70 80 72 V22 C70 20 58 22 50 28 Z" fill="none" stroke="${c}" stroke-width="6" stroke-linejoin="round"/>
+		<line x1="50" y1="28" x2="50" y2="78" stroke="${c}" stroke-width="5"/>
+		<line x1="28" y1="34" x2="42" y2="36" stroke="${c}" stroke-width="4" stroke-linecap="round"/>
+		<line x1="28" y1="44" x2="42" y2="46" stroke="${c}" stroke-width="4" stroke-linecap="round"/>
+		<line x1="58" y1="36" x2="72" y2="34" stroke="${c}" stroke-width="4" stroke-linecap="round"/>
+		<line x1="58" y1="46" x2="72" y2="44" stroke="${c}" stroke-width="4" stroke-linecap="round"/>`,
 	gauge: (c) => `
 		<path d="M20 66 A30 30 0 0 1 80 66" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
 		<line x1="50" y1="66" x2="66" y2="42" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
@@ -130,6 +137,7 @@ const posts = [
 	{ slug: 'vps-comparison', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '比較', icon: 'scale', title: 'VPS徹底比較' },
 	{ slug: 'lightgbm-signal-tutorial', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '機械学習', icon: 'brain', title: 'LightGBM入門' },
 	{ slug: 'trading-metrics-guide', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '成績指標', icon: 'gauge', title: '成績指標の読み方' },
+	{ slug: 'ccxt-cheatsheet', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '早見表', icon: 'book', title: 'ccxtの使い方まとめ' },
 ];
 
 function svgFor(p) {

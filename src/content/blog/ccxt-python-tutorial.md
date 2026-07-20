@@ -1,6 +1,6 @@
 ---
 title: 'Python+ccxtで仮想通貨ボットを自作する第一歩【コード付き入門】'
-description: '仮想通貨の自動売買ボット自作に必須のライブラリccxtの入門解説。価格取得から残高確認、注文までの実際のPythonコードを、ボット実運用者が紹介します。'
+description: '仮想通貨の自動売買ボット自作に必須のライブラリccxtの入門解説。ccxtとは何か、pipでのインストール方法から、価格取得・残高確認・注文までの実際のPythonコードを、ボット実運用者が紹介します。'
 pubDate: '2026-07-05'
 heroImage: '../../assets/eyecatch/ccxt-python-tutorial.png'
 ---
@@ -9,12 +9,39 @@ heroImage: '../../assets/eyecatch/ccxt-python-tutorial.png'
 
 ## ccxtとは
 
-ccxtは、世界中の100以上の仮想通貨取引所のAPIを**同じ書き方で**呼べるPythonライブラリです(JavaScript/PHP版もあります)。
+**ccxt**(CryptoCurrency eXchange Trading Library)は、世界中の100以上の仮想通貨取引所のAPIを**同じ書き方で**呼べるオープンソースのライブラリです。Python・JavaScript・PHPに対応しており、無料で使えます。
 
-取引所ごとにバラバラなAPI仕様を吸収してくれるので、「取引所を乗り換えたらコードを全部書き直し」という事態を避けられます。ボット向きの取引所はほぼ対応しています。
+普通、取引所のAPIは各社バラバラの仕様で、取引所ごとに認証方法もレスポンスの形式も違います。ccxtはその差を吸収してくれるので:
+
+- **同じコードが複数の取引所で動く** — `ccxt.mexc()` を `ccxt.bybit()` に変えるだけで乗り換えられる
+- **署名などの面倒な認証処理を書かなくていい** — APIキーを渡すだけ
+- **価格取得・注文・残高照会など、ボットに必要な操作が一通り揃っている**
+
+自作ボット界隈では事実上の標準ライブラリで、私の実運用ボットもccxtの上に組んでいます。
+
+## ccxtのインストール(pip)
+
+Pythonなら pip で1コマンドです。
 
 ```bash
+# インストール
 pip install ccxt
+
+# 既に入っている場合の更新
+pip install -U ccxt
+
+# バージョン確認
+python -c "import ccxt; print(ccxt.__version__)"
+```
+
+取引所のAPI仕様は頻繁に変わり、ccxt側も高頻度で追従更新されています。ボットの挙動がおかしくなったときは、**まずccxtを最新版に更新してみる**のが定石です。
+
+対応取引所の一覧はコードからも確認できます:
+
+```python
+import ccxt
+print(len(ccxt.exchanges))  # 対応取引所の数
+print(ccxt.exchanges[:10])  # 取引所IDの一覧(先頭10件)
 ```
 
 ## ステップ1: 価格を取得する(APIキー不要)
@@ -88,7 +115,7 @@ print(order['id'])
 
 ## 次のステップ
 
-1. ccxtでデータ取得 → まずはここから
+1. ccxtでデータ取得 → まずはここから。よく使うメソッドは[ccxt主要メソッド早見表](/blog/ccxt-cheatsheet/)にまとめました
 2. 戦略を書いてバックテスト → [バックテストの罠](/blog/backtest-pitfalls/)を必ず読む
 3. 最小サイズで実運用 → [VPSで24時間稼働](/blog/vps-bot-24h/)
 4. 監視を整える → [Discord通知の作り方](/blog/discord-notification-bot/)
