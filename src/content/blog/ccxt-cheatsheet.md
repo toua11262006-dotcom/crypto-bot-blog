@@ -176,7 +176,7 @@ except ccxt.ExchangeError as e:
 - 数量単位は `load_markets()` で確認してから発注する
 - エラーは種類ごとに対処。特に「残高不足」と「注文が見えない」は状態確認のサイン
 
-APIキーの発行と安全管理は[こちらの記事](/blog/api-key-security/)、ボット全体の組み方は[Python+ccxt入門](/blog/ccxt-python-tutorial/)でどうぞ。
+実際に遭遇するエラーの原因と対処は[ccxtのよくあるエラーと対処法](/blog/ccxt-common-errors/)にまとめました。APIキーの発行と安全管理は[こちらの記事](/blog/api-key-security/)、ボット全体の組み方は[Python+ccxt入門](/blog/ccxt-python-tutorial/)でどうぞ。
 
 <div class="affiliate-box">
 <span class="label">PR</span>

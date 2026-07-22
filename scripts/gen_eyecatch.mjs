@@ -103,6 +103,15 @@ const icons = {
 		<line x1="36" y1="30" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="80" stroke="${c}" stroke-width="4"/>`,
+	bug: (c) => `
+		<ellipse cx="50" cy="56" rx="17" ry="21" fill="none" stroke="${c}" stroke-width="6"/>
+		<path d="M39 38 a11 11 0 0 1 22 0" fill="none" stroke="${c}" stroke-width="6"/>
+		<line x1="33" y1="46" x2="20" y2="40" stroke="${c}" stroke-width="5" stroke-linecap="round"/>
+		<line x1="33" y1="58" x2="18" y2="58" stroke="${c}" stroke-width="5" stroke-linecap="round"/>
+		<line x1="33" y1="68" x2="20" y2="76" stroke="${c}" stroke-width="5" stroke-linecap="round"/>
+		<line x1="67" y1="46" x2="80" y2="40" stroke="${c}" stroke-width="5" stroke-linecap="round"/>
+		<line x1="67" y1="58" x2="82" y2="58" stroke="${c}" stroke-width="5" stroke-linecap="round"/>
+		<line x1="67" y1="68" x2="80" y2="76" stroke="${c}" stroke-width="5" stroke-linecap="round"/>`,
 	book: (c) => `
 		<path d="M50 28 C42 22 30 20 20 22 V72 C30 70 42 72 50 78 C58 72 70 70 80 72 V22 C70 20 58 22 50 28 Z" fill="none" stroke="${c}" stroke-width="6" stroke-linejoin="round"/>
 		<line x1="50" y1="28" x2="50" y2="78" stroke="${c}" stroke-width="5"/>
@@ -138,6 +147,7 @@ const posts = [
 	{ slug: 'lightgbm-signal-tutorial', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '機械学習', icon: 'brain', title: 'LightGBM入門' },
 	{ slug: 'trading-metrics-guide', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '成績指標', icon: 'gauge', title: '成績指標の読み方' },
 	{ slug: 'ccxt-cheatsheet', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '早見表', icon: 'book', title: 'ccxtの使い方まとめ' },
+	{ slug: 'ccxt-common-errors', bg: '#5E1A1A', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'エラー対処', icon: 'bug', title: 'ccxtのエラーと対処法' },
 ];
 
 function svgFor(p) {

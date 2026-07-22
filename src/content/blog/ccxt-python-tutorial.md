@@ -115,7 +115,7 @@ print(order['id'])
 
 ## 次のステップ
 
-1. ccxtでデータ取得 → まずはここから。よく使うメソッドは[ccxt主要メソッド早見表](/blog/ccxt-cheatsheet/)にまとめました
+1. ccxtでデータ取得 → まずはここから。よく使うメソッドは[ccxt主要メソッド早見表](/blog/ccxt-cheatsheet/)、つまずいたら[よくあるエラーと対処法](/blog/ccxt-common-errors/)へ
 2. 戦略を書いてバックテスト → [バックテストの罠](/blog/backtest-pitfalls/)を必ず読む
 3. 最小サイズで実運用 → [VPSで24時間稼働](/blog/vps-bot-24h/)
 4. 監視を整える → [Discord通知の作り方](/blog/discord-notification-bot/)
