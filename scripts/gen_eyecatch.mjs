@@ -103,6 +103,13 @@ const icons = {
 		<line x1="36" y1="30" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="50" stroke="${c}" stroke-width="4"/>
 		<line x1="36" y1="70" x2="64" y2="80" stroke="${c}" stroke-width="4"/>`,
+	sliders: (c) => `
+		<line x1="18" y1="30" x2="82" y2="30" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
+		<line x1="18" y1="50" x2="82" y2="50" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
+		<line x1="18" y1="70" x2="82" y2="70" stroke="${c}" stroke-width="6" stroke-linecap="round"/>
+		<circle cx="64" cy="30" r="9" fill="none" stroke="${c}" stroke-width="6"/>
+		<circle cx="36" cy="50" r="9" fill="none" stroke="${c}" stroke-width="6"/>
+		<circle cx="58" cy="70" r="9" fill="none" stroke="${c}" stroke-width="6"/>`,
 	bug: (c) => `
 		<ellipse cx="50" cy="56" rx="17" ry="21" fill="none" stroke="${c}" stroke-width="6"/>
 		<path d="M39 38 a11 11 0 0 1 22 0" fill="none" stroke="${c}" stroke-width="6"/>
@@ -148,6 +155,7 @@ const posts = [
 	{ slug: 'trading-metrics-guide', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '成績指標', icon: 'gauge', title: '成績指標の読み方' },
 	{ slug: 'ccxt-cheatsheet', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '早見表', icon: 'book', title: 'ccxtの使い方まとめ' },
 	{ slug: 'ccxt-common-errors', bg: '#5E1A1A', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'エラー対処', icon: 'bug', title: 'ccxtのエラーと対処法' },
+	{ slug: 'exchange-builtin-bots', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '初心者向け', icon: 'sliders', title: '取引所の自動売買ボット機能' },
 ];
 
 function svgFor(p) {
