@@ -41,7 +41,7 @@ VPS選びで最初に迷うのがここです。**動かすボットの種類で
 <span class="label">PR</span>
 <p>筆者のボットも国内VPSの <strong>ConoHa VPS</strong> 上で24時間稼働しています。最安プランは月数百円から、申し込んだその日にUbuntuサーバーが立ち上がります。</p>
 <p><a href="https://px.a8.net/svt/ejp?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" rel="nofollow">サービス開発やテスト環境に便利な【ConoHa】</a>
-<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" alt=""></p>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B7U0Y+3C9KZ6+50+4YX6PU" alt=""></p>
 </div>
 
 ### 2. リージョン(サーバーの場所)

@@ -1,13 +1,19 @@
 import { createRequire } from 'module';
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-const require = createRequire('C:/Users/kamik/Desktop/crypto-bot-blog/package.json');
+// スクリプト位置からの相対パスで解決 (Windows/Linux どちらでも動く)
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const require = createRequire(join(ROOT, 'package.json'));
 const sharp = require('sharp');
 
-const OUT = 'C:/Users/kamik/Desktop/crypto-bot-blog/src/assets/eyecatch';
+const OUT = join(ROOT, 'src/assets/eyecatch');
 mkdirSync(OUT, { recursive: true });
 
-const FONT = "'Yu Gothic UI','Yu Gothic','Meiryo',sans-serif";
+// 日本語フォント: Windows(Yu Gothic/Meiryo) → Linux(Noto/IPA) の順にフォールバック
+const FONT =
+	"'Yu Gothic UI','Yu Gothic','Meiryo','Noto Sans CJK JP','Noto Sans JP','IPAexGothic','IPAGothic',sans-serif";
 
 // アイコン: 100x100 viewBox の stroke パス
 const icons = {
