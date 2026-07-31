@@ -7,7 +7,9 @@ heroImage: '../../assets/eyecatch/ccxt-cheatsheet.png'
 
 自作ボットの開発中、「ccxtでアレどう書くんだっけ?」と調べ直すことが何度もあります。この記事は、実運用ボットをccxtで組んでいる筆者が「これだけ覚えれば大体作れる」という**主要メソッドの早見表**としてまとめたものです。
 
-ccxt自体が初めての方は、先に[Python+ccxt入門](/blog/ccxt-python-tutorial/)を読むのがおすすめです。
+> **この記事は逆引きリファレンスです。**
+> 「ccxtとは何か」「インストール方法」から知りたい方は[ccxtとは?Pythonで仮想通貨ボットを自作する第一歩](/blog/ccxt-python-tutorial/)へ。
+> エラーで詰まっている方は[ccxtのエラーと対処法](/blog/ccxt-common-errors/)へどうぞ。
 
 ## 準備: 取引所インスタンスの作り方
 

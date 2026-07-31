@@ -7,7 +7,9 @@ heroImage: '../../assets/eyecatch/ccxt-common-errors.png'
 
 ccxtでボットを組んでいると、必ずエラーにぶつかります。しかも厄介なことに、**エラーメッセージが素直に原因を教えてくれないことが多い**のです。この記事では、筆者が実運用で実際に踏んだエラーと、その原因・対処法をまとめます。
 
-ccxtの基本的な使い方は[Python+ccxt入門](/blog/ccxt-python-tutorial/)、メソッド一覧は[ccxt使い方まとめ](/blog/ccxt-cheatsheet/)をどうぞ。
+> **この記事はトラブル解決用です。**
+> 「ccxtとは何か」から知りたい方は[ccxtとは?Pythonで仮想通貨ボットを自作する第一歩](/blog/ccxt-python-tutorial/)、
+> メソッドの書き方を調べたい方は[ccxt主要メソッド早見表](/blog/ccxt-cheatsheet/)へどうぞ。
 
 ## エラーの種類を知る
 

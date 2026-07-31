@@ -7,6 +7,10 @@ heroImage: '../../assets/eyecatch/ccxt-python-tutorial.png'
 
 「自動売買ボットを自作してみたい」と思ったとき、最初に覚えるべきライブラリが **ccxt** です。私のボットもccxtの上に組んでいます。この記事では、価格取得から注文までの最初の一歩をコード付きで解説します。
 
+> **この記事は「ccxtをこれから使う人」向けの入門記事です。**
+> すでに使っていて「あのメソッドどう書くんだっけ?」を調べたい方は[ccxt主要メソッド早見表](/blog/ccxt-cheatsheet/)、
+> エラーで詰まっている方は[ccxtのエラーと対処法](/blog/ccxt-common-errors/)が近道です。
+
 ## ccxtとは
 
 **ccxt**(CryptoCurrency eXchange Trading Library)は、世界中の100以上の仮想通貨取引所のAPIを**同じ書き方で**呼べるオープンソースのライブラリです。Python・JavaScript・PHPに対応しており、無料で使えます。
