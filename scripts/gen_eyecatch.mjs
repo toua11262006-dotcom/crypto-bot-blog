@@ -164,6 +164,7 @@ const posts = [
 	{ slug: 'exchange-builtin-bots', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '初心者向け', icon: 'sliders', title: '取引所の自動売買ボット機能' },
 	{ slug: 'python-technical-indicators', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'chart', title: 'テクニカル指標の計算' },
 	{ slug: 'walkforward-backtest', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '検証', icon: 'code', title: 'ウォークフォワード実装' },
+	{ slug: 'bot-common-mistakes', bg: '#5E1A1A', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: '開発', icon: 'bug', title: 'よくある失敗10選' },
 ];
 
 function svgFor(p) {
