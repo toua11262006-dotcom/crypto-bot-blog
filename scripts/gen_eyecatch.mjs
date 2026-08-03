@@ -166,6 +166,7 @@ const posts = [
 	{ slug: 'walkforward-backtest', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '検証', icon: 'code', title: 'ウォークフォワード実装' },
 	{ slug: 'bot-common-mistakes', bg: '#5E1A1A', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: '開発', icon: 'bug', title: 'よくある失敗10選' },
 	{ slug: 'perpetual-futures-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '基礎知識', icon: 'scale', title: '無期限先物とは?' },
+	{ slug: 'orderbook-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'scale', title: '板情報の読み方' },
 ];
 
 function svgFor(p) {
