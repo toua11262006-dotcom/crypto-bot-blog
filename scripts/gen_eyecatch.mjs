@@ -170,6 +170,7 @@ const posts = [
 	{ slug: 'bot-log-design', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '運用', icon: 'book', title: 'ログ設計の基本' },
 	{ slug: 'pandas-ohlcv-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'code', title: 'pandasでOHLCV処理' },
 	{ slug: 'api-rate-limit-design', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'gauge', title: 'レートリミット設計' },
+	{ slug: 'bot-testing-pytest', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '開発', icon: 'shield', title: 'テストの書き方' },
 ];
 
 function svgFor(p) {
