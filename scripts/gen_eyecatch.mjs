@@ -173,6 +173,7 @@ const posts = [
 	{ slug: 'bot-testing-pytest', bg: '#04342C', mid: '#5DCAA5', light: '#E1F5EE', chipB: '#0F6E56', chipT: '#9FE1CB', cat: '開発', icon: 'shield', title: 'テストの書き方' },
 	{ slug: 'multi-exchange-bot-design', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '設計', icon: 'plug', title: '複数取引所対応設計' },
 	{ slug: 'order-types-guide', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '基礎知識', icon: 'sliders', title: '注文タイプの使い分け' },
+	{ slug: 'bot-daily-monitoring-routine', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '運用', icon: 'bell', title: '毎日の監視ルーティン' },
 ];
 
 function svgFor(p) {
