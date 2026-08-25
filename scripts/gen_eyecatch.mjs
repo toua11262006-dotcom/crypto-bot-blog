@@ -176,6 +176,7 @@ const posts = [
 	{ slug: 'bot-daily-monitoring-routine', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '運用', icon: 'bell', title: '毎日の監視ルーティン' },
 	{ slug: 'bot-stop-criteria', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: '判断基準', icon: 'gauge', title: 'ボットの止め時' },
 	{ slug: 'bot-restart-state-recovery', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '設計', icon: 'server', title: '再起動と状態復元' },
+	{ slug: 'exchange-outage-failsafe', bg: '#5E1A1A', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: '障害対応', icon: 'bell', title: '障害時のフェイルセーフ' },
 ];
 
 function svgFor(p) {
