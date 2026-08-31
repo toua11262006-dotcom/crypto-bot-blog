@@ -179,6 +179,7 @@ const posts = [
 	{ slug: 'exchange-outage-failsafe', bg: '#5E1A1A', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: '障害対応', icon: 'bell', title: '障害時のフェイルセーフ' },
 	{ slug: 'paper-trading-guide', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '検証', icon: 'sliders', title: 'ペーパートレード検証' },
 	{ slug: 'bot-docker-deploy', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '環境構築', icon: 'server', title: 'ボットのDocker化' },
+	{ slug: 'websocket-realtime-bot', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'send', title: 'WebSocketで即時化' },
 ];
 
 function svgFor(p) {
