@@ -180,6 +180,7 @@ const posts = [
 	{ slug: 'paper-trading-guide', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '検証', icon: 'sliders', title: 'ペーパートレード検証' },
 	{ slug: 'bot-docker-deploy', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '環境構築', icon: 'server', title: 'ボットのDocker化' },
 	{ slug: 'websocket-realtime-bot', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'send', title: 'WebSocketで即時化' },
+	{ slug: 'bot-pnl-calculation', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '設計', icon: 'calc', title: '損益計算の実装' },
 ];
 
 function svgFor(p) {
