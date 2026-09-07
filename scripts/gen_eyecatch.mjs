@@ -182,6 +182,7 @@ const posts = [
 	{ slug: 'websocket-realtime-bot', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'send', title: 'WebSocketで即時化' },
 	{ slug: 'bot-pnl-calculation', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '設計', icon: 'calc', title: '損益計算の実装' },
 	{ slug: 'github-actions-bot-deploy', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: 'デプロイ', icon: 'send', title: 'CI/CDで自動デプロイ' },
+	{ slug: 'maker-taker-fee-guide', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '手数料', icon: 'calc', title: 'メイカー/テイカー手数料' },
 ];
 
 function svgFor(p) {
