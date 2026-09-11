@@ -183,6 +183,7 @@ const posts = [
 	{ slug: 'bot-pnl-calculation', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '設計', icon: 'calc', title: '損益計算の実装' },
 	{ slug: 'github-actions-bot-deploy', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: 'デプロイ', icon: 'send', title: 'CI/CDで自動デプロイ' },
 	{ slug: 'maker-taker-fee-guide', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '手数料', icon: 'calc', title: 'メイカー/テイカー手数料' },
+	{ slug: 'env-secrets-management', bg: '#501313', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'セキュリティ', icon: 'lock', title: '秘密情報の管理術' },
 ];
 
 function svgFor(p) {
