@@ -3,6 +3,7 @@ title: 'WebSocket APIとは?ボットをリアルタイム化する仕組みと�
 description: '価格取得のポーリングに限界を感じたら検討したいWebSocket API。RESTとの違い、向いている用途、再接続・再同期を考慮したPython実装例まで、設計の考え方を整理します。'
 pubDate: '2026-08-31'
 heroImage: '../../assets/eyecatch/websocket-realtime-bot.png'
+category: 'development'
 ---
 
 「価格の反映が遅れて指値のタイミングを逃した」「取得間隔を短くしたらレートリミットに引っかかった」。REST APIを一定間隔で叩く「ポーリング」でボットを作っていると、こうした壁に当たることがあります。

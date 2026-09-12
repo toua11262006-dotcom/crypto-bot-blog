@@ -3,6 +3,7 @@ title: '機械学習で売買シグナルを作る|LightGBM入門【Pythonコー
 description: 'LightGBMは無料で使えるオープンソースの機械学習ライブラリ。BTC自動売買ボットに組み込む手順を、特徴量設計・ラベル付け・学習・予測までPythonコード付きで実運用者が解説します。'
 pubDate: '2026-07-09'
 heroImage: '../../assets/eyecatch/lightgbm-signal-tutorial.png'
+category: 'development'
 ---
 
 筆者のBTCボットは、売買判断にLightGBM(機械学習)を使っています。この記事では、「ルールベースの戦略から一歩進んで、機械学習でシグナルを作ってみたい」という方向けに、最初の一歩をコード付きで解説します。

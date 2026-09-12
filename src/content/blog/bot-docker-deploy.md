@@ -3,6 +3,7 @@ title: '自動売買ボットをDocker化する方法とは?VPS運用を安定�
 description: 'ボットをDockerでコンテナ化すると、環境構築のやり直しやVPS移行が驚くほど楽になります。Dockerfileとdocker-composeの書き方、秘密情報の扱い、systemdとの使い分けを一般的な指針として解説します。'
 pubDate: '2026-08-29'
 heroImage: '../../assets/eyecatch/bot-docker-deploy.png'
+category: 'operations'
 ---
 
 VPSにPythonを直接インストールしてボットを動かしていると、「ライブラリのバージョンが合わず動かなくなった」「サーバーを立て直したら環境構築からやり直し」といった問題に直面しがちです。Dockerでボットをコンテナ化しておくと、こうした環境依存のトラブルをかなり減らせます。この記事では、自動売買ボットをDocker化する基本の考え方と手順を整理します。

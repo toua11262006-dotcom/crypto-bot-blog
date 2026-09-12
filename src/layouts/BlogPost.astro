@@ -5,10 +5,20 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+import { CATEGORIES, type CategoryKey } from '../consts';
 
-type Props = CollectionEntry<'blog'>['data'] & { hideAdDisclosure?: boolean };
+type Props = Omit<CollectionEntry<'blog'>['data'], 'category'> & {
+	hideAdDisclosure?: boolean;
+	/** 記事ページのみ。固定ページ(運営者情報など)では省略する */
+	category?: string;
+	postId?: string;
+};
 
-const { title, description, pubDate, updatedDate, heroImage, hideAdDisclosure } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, hideAdDisclosure, category, postId } =
+	Astro.props;
+
+const categoryInfo = category ? CATEGORIES[category as CategoryKey] : undefined;
 ---
 
 <html lang="ja">
@@ -59,6 +69,22 @@ const { title, description, pubDate, updatedDate, heroImage, hideAdDisclosure } 
 				border-radius: 8px;
 				padding: 0.6em 1em;
 			}
+			.category-badge {
+				display: inline-block;
+				margin-bottom: 0.9em;
+				padding: 0.3em 1.1em;
+				border-radius: 999px;
+				background: var(--accent);
+				color: #fff;
+				font-size: 0.72em;
+				font-weight: 700;
+				text-decoration: none;
+				line-height: 1.6;
+			}
+			.category-badge:hover {
+				background: var(--accent-dark);
+				color: #fff;
+			}
 		</style>
 	</head>
 
@@ -71,6 +97,13 @@ const { title, description, pubDate, updatedDate, heroImage, hideAdDisclosure } 
 				</div>
 				<div class="prose">
 					<div class="title">
+						{
+							categoryInfo && (
+								<a class="category-badge" href={`/category/${category}/`}>
+									{categoryInfo.label}
+								</a>
+							)
+						}
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							{
@@ -90,6 +123,7 @@ const { title, description, pubDate, updatedDate, heroImage, hideAdDisclosure } 
 						)
 					}
 					<slot />
+					{category && postId && <RelatedPosts category={category} currentId={postId} />}
 				</div>
 			</article>
 		</main>

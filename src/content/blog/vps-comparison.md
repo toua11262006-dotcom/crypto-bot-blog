@@ -3,6 +3,7 @@ title: 'ボット運用向けVPS徹底比較|スペック・料金・選び方�
 description: 'BTC自動売買ボットを実際にVPSで運用している筆者が、Linux VPSとFX特化Windows VPSの違い、必要なスペックの目安、料金相場、選び方のポイントを比較しながら解説します。'
 pubDate: '2026-07-08'
 heroImage: '../../assets/eyecatch/vps-comparison.png'
+category: 'operations'
 ---
 
 自動売買ボットの24時間運用にはVPSがほぼ必須です([なぜ必要かはこちらの記事](/blog/vps-bot-24h/)で解説)。とはいえ、いざ選ぶとなると種類が多くて迷います。この記事では、実際にVPSでボットを運用している筆者が、比較の軸と選び方を整理します。

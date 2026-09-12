@@ -3,6 +3,7 @@ title: 'GitHub Actionsでボットを自動デプロイする方法とは?CI/CD�
 description: 'コードをpushするたびにテストが走り、問題なければVPSへ反映される。そんなCI/CDをGitHub Actionsで組む方法と、取引ボットならではの注意点を一般的な設計指針として解説します。'
 pubDate: '2026-09-03'
 heroImage: '../../assets/eyecatch/github-actions-bot-deploy.png'
+category: 'operations'
 ---
 
 ボットのコードを直したあと、毎回VPSにSSHでログインして `git pull` し、コンテナを再ビルドして再起動する。この作業は、[pytestでテストの書き方](/blog/bot-testing-pytest/)を整えるほど頻繁に発生し、手作業が増えるほど「テストを飛ばして急いで反映する」といった事故の芽にもなります。GitHub Actionsを使えば、pushをきっかけにテストとデプロイを自動化できます。この記事では、自動売買ボットのCI/CDをどう設計するかを一般的な指針として整理します。

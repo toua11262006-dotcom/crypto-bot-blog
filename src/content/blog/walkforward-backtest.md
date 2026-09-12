@@ -3,6 +3,7 @@ title: 'ウォークフォワード検証とは?ccxtのOHLCVで実装する基�
 description: 'バックテストで良い成績が出ても本番で崩れることがあります。ccxtで取得したOHLCVデータを使い、ルックアヘッドを避けるウォークフォワード検証をPythonで実装する考え方とコード例を解説します。'
 pubDate: '2026-07-29'
 heroImage: '../../assets/eyecatch/walkforward-backtest.png'
+category: 'strategy'
 ---
 
 「バックテストでは勝てたのに、本番では全然だめだった」という話はよく聞きます。原因の多くは、検証方法そのものに問題があるケースです。[バックテストの罠についての記事](/blog/backtest-pitfalls/)でも触れましたが、今回はその対策の中心となる**ウォークフォワード検証**を、ccxtで取得したOHLCVデータを使って実際にコードで実装する手順を解説します。

@@ -3,6 +3,7 @@ title: 'ccxtとは?Pythonで仮想通貨ボットを自作する第一歩【コ�
 description: 'ccxtとは何か、pipでのインストールから、価格取得・残高確認・注文までをPythonコード付きで解説。実際にBTCボットを24時間運用している筆者が、公式ドキュメントには書かれていない実運用の注意点まで紹介します。'
 pubDate: '2026-07-05'
 heroImage: '../../assets/eyecatch/ccxt-python-tutorial.png'
+category: 'development'
 ---
 
 「自動売買ボットを自作してみたい」と思ったとき、最初に覚えるべきライブラリが **ccxt** です。私のボットもccxtの上に組んでいます。この記事では、価格取得から注文までの最初の一歩をコード付きで解説します。

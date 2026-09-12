@@ -3,6 +3,7 @@ title: 'PythonでDiscordに通知を送る方法|Webhookでボットの稼働を
 description: 'Discord WebhookをPythonから叩いて通知を送る方法を、コピペで動くコード付きで解説。シンプルなテキスト通知から見やすいEmbed形式、403エラーの対処法、通知が届かないときのチェックリストまでまとめました。'
 pubDate: '2026-07-05'
 heroImage: '../../assets/eyecatch/discord-notification-bot.png'
+category: 'operations'
 ---
 
 自動売買ボットを24時間運用するうえで、実は売買ロジックと同じくらい重要なのが**通知の仕組み**です。私のボットはDiscordに通知を送る設計にしており、スマホひとつで稼働状況を把握できます。

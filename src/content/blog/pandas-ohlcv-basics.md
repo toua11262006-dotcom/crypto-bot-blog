@@ -3,6 +3,7 @@ title: 'pandasでOHLCVデータを扱う基本|リサンプリング・欠損値
 description: 'ccxtで取得したOHLCVデータをpandasのDataFrameとして正しく扱う方法を解説。タイムスタンプの変換、時間足のリサンプリング、欠損足の穴埋め、複数シンボルの管理まで、コード付きでまとめました。'
 pubDate: '2026-08-07'
 heroImage: '../../assets/eyecatch/pandas-ohlcv-basics.png'
+category: 'development'
 ---
 
 自動売買ボットを作っていると、ローソク足(OHLCV)データをpandasのDataFrameに変換してから指標計算やバックテストに使う場面が何度も出てきます。ところが「タイムスタンプの単位を間違えて時刻がズレる」「時間足を変換したら値がおかしい」「欠損した足のせいで指標計算が崩れる」といった、地味だけど気づきにくいトラブルにハマりがちです。この記事では、OHLCVデータをpandasで扱うときの基本パターンを整理します。

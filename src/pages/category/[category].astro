@@ -1,0 +1,194 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { CATEGORIES, CATEGORY_KEYS, SITE_TITLE, type CategoryKey } from '../../consts';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return CATEGORY_KEYS.map((key) => ({
+		params: { category: key },
+		props: {
+			categoryKey: key,
+			posts: posts
+				.filter((p) => p.data.category === key)
+				.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+		},
+	}));
+}
+
+const { categoryKey, posts } = Astro.props;
+const info = CATEGORIES[categoryKey as CategoryKey];
+const pageTitle = `${info.label}の記事一覧 | ${SITE_TITLE}`;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title={pageTitle} description={info.description} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.cat-head {
+				margin-bottom: 2em;
+			}
+			.cat-head h1 {
+				font-size: 2em;
+				margin-bottom: 0.3em;
+			}
+			.cat-head p {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin: 0;
+			}
+			.cat-head .count {
+				display: inline-block;
+				margin-top: 0.6em;
+				font-size: 0.8em;
+				color: rgb(var(--gray));
+			}
+			.cat-nav {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em;
+				margin-bottom: 2.5em;
+			}
+			.cat-nav a {
+				padding: 0.4em 1.1em;
+				border-radius: 999px;
+				border: 1px solid rgb(var(--gray-light));
+				font-size: 0.82em;
+				text-decoration: none;
+				color: rgb(var(--black));
+				background: #fff;
+			}
+			.cat-nav a:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+			.cat-nav a.active {
+				background: var(--accent);
+				border-color: var(--accent);
+				color: #fff;
+				font-weight: 700;
+			}
+			.post-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.post-card {
+				background: #fff;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 12px;
+				overflow: hidden;
+				transition: 0.2s ease;
+			}
+			.post-card:hover {
+				box-shadow: 0 6px 20px rgba(var(--gray), 30%);
+				transform: translateY(-3px);
+			}
+			.post-card a {
+				display: block;
+				text-decoration: none;
+				color: inherit;
+				height: 100%;
+			}
+			.post-card img {
+				width: 100%;
+				height: auto;
+				display: block;
+				border-radius: 0;
+			}
+			.post-body {
+				padding: 1em 1.2em 1.2em;
+			}
+			.post-body .title {
+				font-size: 0.95em;
+				font-weight: 700;
+				color: rgb(var(--black));
+				line-height: 1.45;
+				margin: 0 0 0.5em 0;
+			}
+			.post-card:hover .title {
+				color: var(--accent);
+			}
+			.post-body .desc {
+				font-size: 0.75em;
+				color: rgb(var(--gray));
+				margin: 0 0 0.6em 0;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.post-body .date {
+				font-size: 0.7em;
+				color: rgb(var(--gray));
+			}
+			@media (max-width: 900px) {
+				.post-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media (max-width: 600px) {
+				.post-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="cat-head">
+				<h1>{info.label}</h1>
+				<p>{info.description}</p>
+				<span class="count">{posts.length}件の記事</span>
+			</section>
+
+			<nav class="cat-nav">
+				<a href="/blog/">すべて</a>
+				{
+					CATEGORY_KEYS.map((key) => (
+						<a
+							href={`/category/${key}/`}
+							class={key === categoryKey ? 'active' : undefined}
+						>
+							{CATEGORIES[key].label}
+						</a>
+					))
+				}
+			</nav>
+
+			<ul class="post-grid">
+				{
+					posts.map((post) => (
+						<li class="post-card">
+							<a href={`/blog/${post.id}/`}>
+								{post.data.heroImage && (
+									<Image width={480} height={240} src={post.data.heroImage} alt="" />
+								)}
+								<div class="post-body">
+									<h2 class="title">{post.data.title}</h2>
+									<p class="desc">{post.data.description}</p>
+									<span class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</span>
+								</div>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

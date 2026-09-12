@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import { CATEGORIES, type CategoryKey } from '../consts';
+
+interface Props {
+	/** 表示中の記事のカテゴリ */
+	category: string;
+	/** 表示中の記事ID(自分自身を除外するため) */
+	currentId: string;
+	/** 最大表示件数 */
+	limit?: number;
+}
+
+const { category, currentId, limit = 3 } = Astro.props;
+
+const all = await getCollection('blog');
+
+// 同カテゴリの記事を新しい順に。足りなければ他カテゴリで補う。
+const sameCategory = all
+	.filter((p) => p.data.category === category && p.id !== currentId)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const others = all
+	.filter((p) => p.data.category !== category && p.id !== currentId)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const related = [...sameCategory, ...others].slice(0, limit);
+
+const categoryInfo = CATEGORIES[category as CategoryKey];
+---
+
+{
+	related.length > 0 && (
+		<aside class="related">
+			<h2>あわせて読みたい</h2>
+			<ul>
+				{related.map((post) => {
+					const info = CATEGORIES[post.data.category as CategoryKey];
+					return (
+						<li>
+							<a href={`/blog/${post.id}/`}>
+								<span class="cat">{info?.label ?? post.data.category}</span>
+								<span class="ttl">{post.data.title}</span>
+							</a>
+						</li>
+					);
+				})}
+			</ul>
+			{categoryInfo && (
+				<p class="more">
+					<a href={`/category/${category}/`}>「{categoryInfo.label}」の記事をすべて見る →</a>
+				</p>
+			)}
+		</aside>
+	)
+}
+
+<style>
+	.related {
+		margin: 3em 0 1em;
+		padding: 1.5em 1.6em;
+		background: rgb(var(--gray-light));
+		border-radius: 12px;
+	}
+	.related h2 {
+		font-size: 1.15em;
+		margin: 0 0 0.8em 0;
+	}
+	.related ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.related li {
+		margin-bottom: 0.7em;
+	}
+	.related li a {
+		display: flex;
+		align-items: baseline;
+		gap: 0.7em;
+		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.related li a:hover .ttl {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+	.related .cat {
+		flex-shrink: 0;
+		font-size: 0.68em;
+		font-weight: 700;
+		color: #fff;
+		background: var(--accent);
+		border-radius: 4px;
+		padding: 0.2em 0.7em;
+	}
+	.related .ttl {
+		font-size: 0.9em;
+		font-weight: 700;
+		line-height: 1.4;
+	}
+	.related .more {
+		margin: 1.2em 0 0 0;
+		font-size: 0.82em;
+	}
+	@media (max-width: 600px) {
+		.related li a {
+			flex-direction: column;
+			gap: 0.3em;
+		}
+		.related .cat {
+			align-self: flex-start;
+		}
+	}
+</style>

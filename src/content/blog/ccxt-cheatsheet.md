@@ -3,6 +3,7 @@ title: 'ccxtの使い方まとめ|主要メソッド早見表【コピペで動�
 description: '「ccxtでアレどう書くんだっけ?」を解決する早見表。価格取得・ローソク足・残高・発注・キャンセル・約定履歴まで、コピペで動くPython実例と一覧表にまとめました。実運用ボット開発者が実際に使っている書き方です。'
 pubDate: '2026-07-11'
 heroImage: '../../assets/eyecatch/ccxt-cheatsheet.png'
+category: 'development'
 ---
 
 自作ボットの開発中、「ccxtでアレどう書くんだっけ?」と調べ直すことが何度もあります。この記事は、実運用ボットをccxtで組んでいる筆者が「これだけ覚えれば大体作れる」という**主要メソッドの早見表**としてまとめたものです。
@@ -153,6 +154,83 @@ except ccxt.ExchangeError as e:
 
 - **「残高不足」エラーは手がかり**です。身に覚えがないのに出たら、認識できていないポジションや注文が証拠金を拘束しているサイン。`fetch_positions` で実態を確認しましょう
 - **注文直後の照会は信じすぎない**こと。出したばかりの注文が `fetch_open_orders` に見えないことがあります(取引所内部の反映遅延)。「見えない=存在しない」と即断せず、時間を置いた再照会やポジション照会と突き合わせるのが安全です
+
+## リファレンス: つまずきやすい仕様
+
+メソッドの呼び方は分かっても、引数の書式でハマることがよくあります。逆引きで確認できるようまとめました。
+
+### シンボル表記: `BTC/USDT` と `BTC/USDT:USDT` の違い
+
+ccxtは市場の種類によってシンボルの書き方が変わります。
+
+| 市場 | 表記 | 例 |
+| --- | --- | --- |
+| 現物 | `BASE/QUOTE` | `BTC/USDT` |
+| 無期限先物(USDT決済) | `BASE/QUOTE:QUOTE` | `BTC/USDT:USDT` |
+| 無期限先物(コイン決済) | `BASE/QUOTE:BASE` | `BTC/USD:BTC` |
+
+「先物のポジションが取れない」ときは、たいていコロン以降の決済通貨が抜けています。
+
+```python
+exchange.load_markets()
+# 実際に使えるシンボルを確認する
+print([s for s in exchange.symbols if s.startswith('BTC/USDT')])
+```
+
+### timeframe に指定できる値
+
+`fetch_ohlcv` の `timeframe` は取引所ごとに対応値が違います。決め打ちせず、確認してから使いましょう。
+
+```python
+print(exchange.timeframes)
+# {'1m': '1m', '5m': '5m', '15m': '15m', '1h': '60m', '1d': '1d', ...}
+```
+
+`exchange.has['fetchOHLCV']` で、そもそも対応しているかも確認できます。
+
+### 数量・価格の丸め(精度)
+
+取引所には「価格は0.1刻み」「数量は小数点以下3桁まで」といった刻み幅があります。これを無視して発注すると `InvalidOrder` になります。
+
+```python
+amount = exchange.amount_to_precision('BTC/USDT', 0.0012345)
+price = exchange.price_to_precision('BTC/USDT', 100000.123456)
+order = exchange.create_limit_buy_order('BTC/USDT', amount, price)
+```
+
+最小注文量は `load_markets()` の結果から取れます。
+
+```python
+m = exchange.market('BTC/USDT')
+print(m['limits']['amount']['min'])  # 最小数量
+print(m['limits']['cost']['min'])    # 最小注文額
+print(m['contractSize'])             # 先物の1枚あたりの数量
+```
+
+### 取引所固有のオプションは `params` で渡す
+
+ccxtが共通化していない機能(ポストオンリー、リデュースオンリー等)は、第5引数の `params` に渡します。
+
+```python
+# 約定したらメイカーにならない場合はキャンセル(ポストオンリー)
+exchange.create_limit_buy_order('BTC/USDT', amount, price, {'postOnly': True})
+
+# 決済専用の注文(ポジションを増やさない)
+exchange.create_market_sell_order('BTC/USDT:USDT', amount, {'reduceOnly': True})
+```
+
+指定できるキーは取引所のAPIドキュメント側の名前になります。共通化されていない部分なので、取引所を変えると動かなくなる点に注意してください。
+
+### 対応状況の確認: `exchange.has`
+
+そのメソッドを取引所がサポートしているかは `has` で分かります。複数取引所に対応するボットでは必須のチェックです。
+
+```python
+if exchange.has['fetchMyTrades']:
+    trades = exchange.fetch_my_trades('BTC/USDT')
+else:
+    print('この取引所は約定履歴APIに未対応')
+```
 
 ## よく使うメソッド一覧表
 

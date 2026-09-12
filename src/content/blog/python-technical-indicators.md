@@ -3,6 +3,7 @@ title: 'テクニカル指標をPythonで計算する方法|移動平均・RSI�
 description: '移動平均・RSI・ATR・ボリンジャーバンドなど、自作ボットでよく使うテクニカル指標をPythonのpandasだけで計算する方法をコード付きで解説します。仕組みの理解にも役立ちます。'
 pubDate: '2026-07-29'
 heroImage: '../../assets/eyecatch/python-technical-indicators.png'
+category: 'development'
 ---
 
 自作ボットでエントリー条件を作るとき、TradingViewの指標をそのまま使いたくても、Pythonのコードに落とし込む必要があります。ライブラリに頼ると「結局中で何を計算しているのか分からない」まま使うことになりがちです。この記事では、代表的なテクニカル指標を**pandasだけ**で計算する方法を、仕組みの説明とあわせて紹介します。

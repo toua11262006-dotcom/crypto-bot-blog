@@ -3,6 +3,7 @@ title: '秘密情報の管理はどうする?.env・gitignore・環境変数の�
 description: 'APIキーやシークレットキーをコードに直接書いてGitHubに公開してしまう事故は珍しくありません。.envファイルとpython-dotenv、.gitignoreの設定、環境ごとの管理方法の違いを一般的な指針として整理します。'
 pubDate: '2026-09-11'
 heroImage: '../../assets/eyecatch/env-secrets-management.png'
+category: 'development'
 ---
 
 自動売買ボットのコードをGitHubで管理していると、「APIキーをどこに書けばいいのか」「.gitignoreに何を入れればいいのか」と迷う場面があります。[APIキー自体の安全な発行・権限設定](/blog/api-key-security/)についてはすでに別記事で触れましたが、今回はそのキーを**コード・リポジトリ側でどう扱うか**という、もう一段手前の基本を整理します。

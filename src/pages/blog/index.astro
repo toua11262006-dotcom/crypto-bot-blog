@@ -5,11 +5,16 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { CATEGORIES, CATEGORY_KEYS, SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryCounts = CATEGORY_KEYS.map((key) => ({
+	key,
+	label: CATEGORIES[key].label,
+	count: allPosts.filter((p) => p.data.category === key).length,
+}));
 ---
 
 <!doctype html>
@@ -84,11 +89,61 @@ const posts = (await getCollection('blog')).sort(
 					font-size: 1.563em;
 				}
 			}
+			.index-head {
+				margin-bottom: 2.5em;
+			}
+			.index-head h1 {
+				font-size: 2em;
+				margin-bottom: 0.2em;
+			}
+			.index-head .lead {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin: 0 0 1.2em 0;
+			}
+			.cat-nav {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em;
+			}
+			.cat-nav a {
+				padding: 0.4em 1.1em;
+				border-radius: 999px;
+				border: 1px solid rgb(var(--gray-light));
+				font-size: 0.82em;
+				text-decoration: none;
+				color: rgb(var(--black));
+				background: #fff;
+			}
+			.cat-nav a:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+			.cat-nav a.active {
+				background: var(--accent);
+				border-color: var(--accent);
+				color: #fff;
+				font-weight: 700;
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
+			<section class="index-head">
+				<h1>記事一覧</h1>
+				<p class="lead">全{posts.length}記事。カテゴリから探せます。</p>
+				<nav class="cat-nav">
+					<a href="/blog/" class="active">すべて({posts.length})</a>
+					{
+						categoryCounts.map((c) => (
+							<a href={`/category/${c.key}/`}>
+								{c.label}({c.count})
+							</a>
+						))
+					}
+				</nav>
+			</section>
 			<section>
 				<ul>
 					{
