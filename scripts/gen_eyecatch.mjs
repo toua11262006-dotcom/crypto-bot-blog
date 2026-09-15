@@ -185,6 +185,7 @@ const posts = [
 	{ slug: 'maker-taker-fee-guide', bg: '#412402', mid: '#EF9F27', light: '#FAEEDA', chipB: '#854F0B', chipT: '#FAC775', cat: '手数料', icon: 'calc', title: 'メイカー/テイカー手数料' },
 	{ slug: 'env-secrets-management', bg: '#501313', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'セキュリティ', icon: 'lock', title: '秘密情報の管理術' },
 	{ slug: 'exchange-bankruptcy-risk', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'shield', title: '取引所破綻への備え' },
+	{ slug: 'exchange-api-spec-change', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'sliders', title: 'API仕様変更への備え' },
 ];
 
 function svgFor(p) {
