@@ -186,6 +186,7 @@ const posts = [
 	{ slug: 'env-secrets-management', bg: '#501313', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'セキュリティ', icon: 'lock', title: '秘密情報の管理術' },
 	{ slug: 'exchange-bankruptcy-risk', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'shield', title: '取引所破綻への備え' },
 	{ slug: 'exchange-api-spec-change', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'sliders', title: 'API仕様変更への備え' },
+	{ slug: 'exchange-history-aggregation-tax', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '損益集計', icon: 'calc', title: '取引履歴の集め方' },
 ];
 
 function svgFor(p) {
