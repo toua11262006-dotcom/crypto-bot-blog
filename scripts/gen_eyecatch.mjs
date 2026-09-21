@@ -188,6 +188,7 @@ const posts = [
 	{ slug: 'exchange-api-spec-change', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'sliders', title: 'API仕様変更への備え' },
 	{ slug: 'exchange-history-aggregation-tax', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '損益集計', icon: 'calc', title: '取引履歴の集め方' },
 	{ slug: 'position-sizing-formula', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'calc', title: 'ポジションサイズ計算' },
+	{ slug: 'spot-futures-fee-difference', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'scale', title: '現物と先物の手数料比較' },
 ];
 
 function svgFor(p) {
