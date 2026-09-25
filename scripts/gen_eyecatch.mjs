@@ -190,6 +190,7 @@ const posts = [
 	{ slug: 'position-sizing-formula', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'calc', title: 'ポジションサイズ計算' },
 	{ slug: 'crypto-loss-offset-basics', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'calc', title: '損益通算の基本' },
 	{ slug: 'spot-futures-fee-difference', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'scale', title: '現物と先物の手数料比較' },
+	{ slug: 'ma-cross-strategy-backtest', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'chart', title: '移動平均クロス戦略' },
 ];
 
 function svgFor(p) {
