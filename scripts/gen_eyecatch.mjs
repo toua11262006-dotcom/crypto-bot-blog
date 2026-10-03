@@ -194,6 +194,7 @@ const posts = [
 	{ slug: 'exchange-account-freeze-risk', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'lock', title: '口座凍結・出金制限リスク' },
 	{ slug: 'slippage-thin-orderbook', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'scale', title: 'スリッページとは?' },
 	{ slug: 'trading-cost-impact-formula', bg: '#033B47', mid: '#5CC6D6', light: '#E0F4F7', chipB: '#0F6979', chipT: '#A7E2EC', cat: 'コスト', icon: 'calc', title: 'コストが成績を削る' },
+	{ slug: 'volatility-breakout-strategy', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'gauge', title: 'ブレイクアウト戦略' },
 ];
 
 function svgFor(p) {
