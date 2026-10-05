@@ -195,6 +195,7 @@ const posts = [
 	{ slug: 'slippage-thin-orderbook', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'scale', title: 'スリッページとは?' },
 	{ slug: 'trading-cost-impact-formula', bg: '#033B47', mid: '#5CC6D6', light: '#E0F4F7', chipB: '#0F6979', chipT: '#A7E2EC', cat: 'コスト', icon: 'calc', title: 'コストが成績を削る' },
 	{ slug: 'volatility-breakout-strategy', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'gauge', title: 'ブレイクアウト戦略' },
+	{ slug: 'exchange-account-takeover-security', bg: '#501313', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'セキュリティ', icon: 'lock', title: 'アカウント乗っ取り対策' },
 ];
 
 function svgFor(p) {
