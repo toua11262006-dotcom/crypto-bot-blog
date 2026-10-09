@@ -197,6 +197,7 @@ const posts = [
 	{ slug: 'volatility-breakout-strategy', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'gauge', title: 'ブレイクアウト戦略' },
 	{ slug: 'exchange-account-takeover-security', bg: '#501313', mid: '#F09595', light: '#FCEBEB', chipB: '#A32D2D', chipT: '#F7C1C1', cat: 'セキュリティ', icon: 'lock', title: 'アカウント乗っ取り対策' },
 	{ slug: 'exchange-kyc-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'shield', title: 'KYC(本人確認)の基本' },
+	{ slug: 'crypto-liquidity-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'target', title: '流動性とは?' },
 ];
 
 function svgFor(p) {
