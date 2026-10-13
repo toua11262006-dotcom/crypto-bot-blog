@@ -199,6 +199,7 @@ const posts = [
 	{ slug: 'exchange-kyc-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'shield', title: 'KYC(本人確認)の基本' },
 	{ slug: 'crypto-liquidity-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'target', title: '流動性とは?' },
 	{ slug: 'curve-fitting-signs', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'sliders', title: 'カーブフィッティング' },
+	{ slug: 'stablecoin-custody-risk', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: '資産保管', icon: 'coins', title: 'ステーブルコインの罠' },
 ];
 
 function svgFor(p) {
