@@ -203,6 +203,7 @@ const posts = [
 	{ slug: 'exchange-wallet-separation', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'send', title: '現物/先物ウォレット分離' },
 	{ slug: 'vps-disk-log-rotation', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '運用', icon: 'gauge', title: 'ディスク容量の守り方' },
 	{ slug: 'grid-bot-range-setting', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'grid', title: 'レンジ設定の決め方' },
+	{ slug: 'asyncio-multi-symbol-bot', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'code', title: '非同期で複数銘柄処理' },
 ];
 
 function svgFor(p) {
