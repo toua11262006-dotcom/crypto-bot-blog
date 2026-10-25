@@ -205,6 +205,7 @@ const posts = [
 	{ slug: 'grid-bot-range-setting', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'grid', title: 'レンジ設定の決め方' },
 	{ slug: 'asyncio-multi-symbol-bot', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'code', title: '非同期で複数銘柄処理' },
 	{ slug: 'order-precision-lot-size', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'sliders', title: '注文の最小単位とは?' },
+	{ slug: 'exchange-sub-account-separation', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'grid', title: 'サブアカウントで資金分離' },
 ];
 
 function svgFor(p) {
