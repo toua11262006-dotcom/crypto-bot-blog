@@ -206,6 +206,7 @@ const posts = [
 	{ slug: 'asyncio-multi-symbol-bot', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'code', title: '非同期で複数銘柄処理' },
 	{ slug: 'order-precision-lot-size', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'sliders', title: '注文の最小単位とは?' },
 	{ slug: 'exchange-sub-account-separation', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'grid', title: 'サブアカウントで資金分離' },
+	{ slug: 'crypto-bot-incorporation-tax-basics', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'scale', title: '法人化すべき?' },
 ];
 
 function svgFor(p) {
