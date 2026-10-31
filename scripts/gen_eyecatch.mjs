@@ -208,6 +208,7 @@ const posts = [
 	{ slug: 'exchange-sub-account-separation', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'grid', title: 'サブアカウントで資金分離' },
 	{ slug: 'crypto-bot-incorporation-tax-basics', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'scale', title: '法人化すべき?' },
 	{ slug: 'rsi-reversal-strategy', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'gauge', title: 'RSI逆張りの検証' },
+	{ slug: 'leverage-liquidation-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '基礎知識', icon: 'scale', title: 'レバレッジと強制ロスカット' },
 ];
 
 function svgFor(p) {
