@@ -209,6 +209,7 @@ const posts = [
 	{ slug: 'crypto-bot-incorporation-tax-basics', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'scale', title: '法人化すべき?' },
 	{ slug: 'rsi-reversal-strategy', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'gauge', title: 'RSI逆張りの検証' },
 	{ slug: 'leverage-liquidation-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '基礎知識', icon: 'scale', title: 'レバレッジと強制ロスカット' },
+	{ slug: 'bot-order-validation', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'shield', title: '発注前チェックで誤発注防止' },
 ];
 
 function svgFor(p) {
