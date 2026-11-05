@@ -208,6 +208,10 @@ const posts = [
 	{ slug: 'exchange-sub-account-separation', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'grid', title: 'サブアカウントで資金分離' },
 	{ slug: 'crypto-bot-incorporation-tax-basics', bg: '#4B1528', mid: '#ED93B1', light: '#FBEAF0', chipB: '#993556', chipT: '#F4C0D1', cat: '税金', icon: 'scale', title: '法人化すべき?' },
 	{ slug: 'rsi-reversal-strategy', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'gauge', title: 'RSI逆張りの検証' },
+	{ slug: 'leverage-liquidation-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '基礎知識', icon: 'scale', title: 'レバレッジと強制ロスカット' },
+	{ slug: 'bot-order-validation', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'shield', title: '発注前チェックで誤発注防止' },
+	{ slug: 'vps-ssh-firewall-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '運用', icon: 'lock', title: '鍵認証とFWの基本' },
+	{ slug: 'exchange-terms-bot-trading', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'scale', title: '利用規約とボット取引' },
 ];
 
 function svgFor(p) {
