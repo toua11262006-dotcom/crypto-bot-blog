@@ -202,7 +202,7 @@ category: 'development'
 
 **開発 (development)**
 - asyncioでボットを非同期化する|複数銘柄を同時に処理する
-- 複数時間足(MTF)のデータをPythonで扱う
+- 複数時間足(MTF)のデータをPythonで扱う (済)
 - ボットの設定をYAML/TOMLで外部化する
 - 分割発注(TWAP)の基本的な実装
 - バックテストを高速化する(pandasのベクトル化)

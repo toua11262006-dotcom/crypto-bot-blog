@@ -213,6 +213,7 @@ const posts = [
 	{ slug: 'vps-ssh-firewall-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '運用', icon: 'lock', title: '鍵認証とFWの基本' },
 	{ slug: 'exchange-terms-bot-trading', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'scale', title: '利用規約とボット取引' },
 	{ slug: 'multi-bot-single-vps', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '運用', icon: 'server', title: '1台で複数ボット運用' },
+	{ slug: 'multi-timeframe-data-python', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'chart', title: '複数時間足(MTF)入門' },
 ];
 
 function svgFor(p) {
