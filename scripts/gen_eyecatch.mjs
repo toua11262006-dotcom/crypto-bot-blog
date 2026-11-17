@@ -217,6 +217,7 @@ const posts = [
 	{ slug: 'multi-strategy-portfolio', bg: '#173404', mid: '#97C459', light: '#EAF3DE', chipB: '#3B6D11', chipT: '#C0DD97', cat: '戦略', icon: 'scale', title: '複数戦略の組み合わせ' },
 	{ slug: 'funding-rate-basics', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '基礎知識', icon: 'gauge', title: 'ファンディングレートとは?' },
 	{ slug: 'exchange-sandbox-testnet', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'sliders', title: 'サンドボックス環境とは' },
+	{ slug: 'crypto-inheritance-succession', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'shield', title: '資産の引き継ぎ問題' },
 ];
 
 function svgFor(p) {
