@@ -219,6 +219,7 @@ const posts = [
 	{ slug: 'exchange-sandbox-testnet', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'sliders', title: 'サンドボックス環境とは' },
 	{ slug: 'crypto-inheritance-succession', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'shield', title: '資産の引き継ぎ問題' },
 	{ slug: 'twap-split-order', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '開発', icon: 'send', title: 'TWAP分割発注の基本' },
+	{ slug: 'exchange-maintenance-bot-design', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'plug', title: '取引所メンテナンス対応' },
 ];
 
 function svgFor(p) {
