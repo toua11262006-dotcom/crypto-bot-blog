@@ -222,6 +222,7 @@ const posts = [
 	{ slug: 'exchange-maintenance-bot-design', bg: '#26215C', mid: '#AFA9EC', light: '#EEEDFE', chipB: '#534AB7', chipT: '#CECBF6', cat: '取引所', icon: 'plug', title: '取引所メンテナンス対応' },
 	{ slug: 'crypto-lending-staking-risk', bg: '#2C2C2A', mid: '#B4B2A9', light: '#F1EFE8', chipB: '#5F5E5A', chipT: '#D3D1C7', cat: 'リスク管理', icon: 'coins', title: '待機資金の利回りの罠' },
 	{ slug: 'candlestick-ohlcv-basics', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '基礎知識', icon: 'chart', title: 'OHLCVの基本' },
+	{ slug: 'bot-version-rollback', bg: '#042C53', mid: '#85B7EB', light: '#E6F1FB', chipB: '#185FA5', chipT: '#B5D4F4', cat: '運用', icon: 'code', title: 'バージョン管理とロールバック' },
 ];
 
 function svgFor(p) {
